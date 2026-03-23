@@ -1,0 +1,64 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Criterios para elegir un LLM</title>
+  <desc id="desc">Diapositiva con criterios de decision para seleccionar un modelo de lenguaje.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2fbf7"/>
+      <stop offset="100%" stop-color="#fcfffd"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#14532d1f"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg3)"/>
+  <text x="90" y="102" font-family="Verdana, Geneva, sans-serif" font-size="46" font-weight="700" fill="#123524">Como elegir un LLM</text>
+  <text x="90" y="150" font-family="Verdana, Geneva, sans-serif" font-size="24" fill="#4d6e60">Piensa en la tarea, el entorno y el costo total de operarlo</text>
+
+  <g filter="url(#shadow3)">
+    <rect x="130" y="235" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="480" y="235" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="830" y="235" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="1180" y="235" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="130" y="480" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="480" y="480" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="830" y="480" width="300" height="180" rx="26" fill="#ffffff"/>
+    <rect x="1180" y="480" width="300" height="180" rx="26" fill="#ffffff"/>
+  </g>
+
+  <g font-family="Verdana, Geneva, sans-serif">
+    <text x="165" y="305" font-size="26" font-weight="700" fill="#123524">Calidad</text>
+    <text x="165" y="345" font-size="20" fill="#4d6e60">Que tan bien responde</text>
+    <text x="165" y="373" font-size="20" fill="#4d6e60">a tu tarea real</text>
+
+    <text x="515" y="305" font-size="26" font-weight="700" fill="#123524">Costo</text>
+    <text x="515" y="345" font-size="20" fill="#4d6e60">API, GPU, tiempo</text>
+    <text x="515" y="373" font-size="20" fill="#4d6e60">y operacion</text>
+
+    <text x="865" y="305" font-size="26" font-weight="700" fill="#123524">Latencia</text>
+    <text x="865" y="345" font-size="20" fill="#4d6e60">Cuanto tarda</text>
+    <text x="865" y="373" font-size="20" fill="#4d6e60">en responder</text>
+
+    <text x="1215" y="305" font-size="26" font-weight="700" fill="#123524">Privacidad</text>
+    <text x="1215" y="345" font-size="20" fill="#4d6e60">Donde viajan</text>
+    <text x="1215" y="373" font-size="20" fill="#4d6e60">los datos</text>
+
+    <text x="165" y="550" font-size="26" font-weight="700" fill="#123524">Contexto</text>
+    <text x="165" y="590" font-size="20" fill="#4d6e60">Cuantos tokens</text>
+    <text x="165" y="618" font-size="20" fill="#4d6e60">puede leer</text>
+
+    <text x="515" y="550" font-size="26" font-weight="700" fill="#123524">Memoria</text>
+    <text x="515" y="590" font-size="20" fill="#4d6e60">Cuanta RAM o vRAM</text>
+    <text x="515" y="618" font-size="20" fill="#4d6e60">necesita</text>
+
+    <text x="865" y="550" font-size="26" font-weight="700" fill="#123524">Coding</text>
+    <text x="865" y="590" font-size="20" fill="#4d6e60">Si ayuda bien</text>
+    <text x="865" y="618" font-size="20" fill="#4d6e60">con Python y SQL</text>
+
+    <text x="1215" y="550" font-size="26" font-weight="700" fill="#123524">Operacion</text>
+    <text x="1215" y="590" font-size="20" fill="#4d6e60">Que tan facil es</text>
+    <text x="1215" y="618" font-size="20" fill="#4d6e60">servirlo y mantenerlo</text>
+  </g>
+
+  <rect x="130" y="760" width="1350" height="58" rx="18" fill="#123524"/>
+  <text x="170" y="798" font-family="Verdana, Geneva, sans-serif" font-size="24" fill="#eefcf5">Elegir bien un modelo no es elegir el mas famoso: es elegir el que encaja mejor con tu problema.</text>
+</svg>

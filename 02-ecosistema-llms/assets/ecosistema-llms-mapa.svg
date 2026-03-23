@@ -1,0 +1,53 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa del ecosistema de LLMs</title>
+  <desc id="desc">Ilustracion que divide el ecosistema de LLMs en propietarios, open source y herramientas de soporte.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f6ff"/>
+      <stop offset="100%" stop-color="#fbfcff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#33415520"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1420" cy="130" r="140" fill="#d9e4ff" opacity="0.5"/>
+  <circle cx="180" cy="760" r="200" fill="#c8d8ff" opacity="0.24"/>
+  <text x="90" y="102" font-family="Verdana, Geneva, sans-serif" font-size="46" font-weight="700" fill="#1f2a44">Mapa del ecosistema actual de LLMs</text>
+  <text x="90" y="150" font-family="Verdana, Geneva, sans-serif" font-size="24" fill="#5b6785">Tres capas para entender el panorama sin perderse</text>
+
+  <g filter="url(#shadow)" font-family="Verdana, Geneva, sans-serif">
+    <rect x="90" y="240" width="430" height="500" rx="30" fill="#ffffff"/>
+    <rect x="585" y="240" width="430" height="500" rx="30" fill="#ffffff"/>
+    <rect x="1080" y="240" width="430" height="500" rx="30" fill="#ffffff"/>
+  </g>
+
+  <g font-family="Verdana, Geneva, sans-serif">
+    <text x="135" y="305" font-size="30" font-weight="700" fill="#22304b">Modelos propietarios</text>
+    <text x="135" y="350" font-size="22" fill="#5c6882">OpenAI, Anthropic, Google,</text>
+    <text x="135" y="382" font-size="22" fill="#5c6882">xAI, Cohere</text>
+    <text x="135" y="445" font-size="21" fill="#46526b">• Muy buenos por API o web</text>
+    <text x="135" y="485" font-size="21" fill="#46526b">• Menos control del modelo</text>
+    <text x="135" y="525" font-size="21" fill="#46526b">• Pago por uso</text>
+    <text x="135" y="565" font-size="21" fill="#46526b">• Integracion rapida</text>
+
+    <text x="630" y="305" font-size="30" font-weight="700" fill="#22304b">Modelos open source</text>
+    <text x="630" y="350" font-size="22" fill="#5c6882">Llama, Mistral, Qwen,</text>
+    <text x="630" y="382" font-size="22" fill="#5c6882">Gemma, DeepSeek</text>
+    <text x="630" y="445" font-size="21" fill="#46526b">• Mas control</text>
+    <text x="630" y="485" font-size="21" fill="#46526b">• Ejecucion local posible</text>
+    <text x="630" y="525" font-size="21" fill="#46526b">• Requieren operacion</text>
+    <text x="630" y="565" font-size="21" fill="#46526b">• Mejor privacidad en ciertos casos</text>
+
+    <text x="1125" y="305" font-size="30" font-weight="700" fill="#22304b">Herramientas intermedias</text>
+    <text x="1125" y="350" font-size="22" fill="#5c6882">Serving, cuantizacion,</text>
+    <text x="1125" y="382" font-size="22" fill="#5c6882">benchmarks y evaluacion</text>
+    <text x="1125" y="445" font-size="21" fill="#46526b">• Ollama</text>
+    <text x="1125" y="485" font-size="21" fill="#46526b">• vLLM</text>
+    <text x="1125" y="525" font-size="21" fill="#46526b">• LM Studio</text>
+    <text x="1125" y="565" font-size="21" fill="#46526b">• Hugging Face ecosystem</text>
+  </g>
+
+  <rect x="90" y="790" width="1420" height="56" rx="18" fill="#22304b"/>
+  <text x="130" y="827" font-family="Verdana, Geneva, sans-serif" font-size="24" fill="#eef2ff">Idea central: elegir un LLM es elegir tambien una forma de operar, pagar, integrar y gobernar datos.</text>
+</svg>
