@@ -20,6 +20,7 @@ Laboratorio guiado en parejas o individual.
 - [Ejercicio 01 - Mejorar prompts débiles](./ejercicio-01-mejorar-prompts.md)
 - [Ejercicio 02 - Medir la calidad de un prompt](./ejercicio-02-evaluacion-calidad-prompts.md)
 - [Ejercicio 03 - Mejorar un prompt con OpenAI Chat](./ejercicio-03-mejorar-prompt-openai-chat.md)
+- [Ejercicio 04 - Usar variables dentro de un prompt](./ejercicio-04-variables-en-prompts.md)
 
 ## Criterio de éxito
 
