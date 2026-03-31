@@ -48,7 +48,7 @@ Carga la API key en la terminal como variable de entorno de la sesión:
 ### Windows CMD
 
 ```cmd
-set OPENAI_API_KEY=sk-ant-api03-.......
+set OPENAI_API_KEY=sk-vos5TFIqk-eIBd....
 ```
 
 ### macOS / Linux / zsh / bash
