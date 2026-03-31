@@ -45,10 +45,10 @@ codex --version
 
 Carga la API key en la terminal como variable de entorno de la sesión:
 
-### Windows PowerShell
+### Windows CMD
 
-```powershell
-$env:OPENAI_API_KEY="pega_aqui_tu_api_key"
+```cmd
+set OPENAI_API_KEY=sk-ant-api03-.......
 ```
 
 ### macOS / Linux / zsh / bash

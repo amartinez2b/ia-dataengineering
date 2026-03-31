@@ -56,14 +56,14 @@ En esta práctica **no se usará login por Claude.ai**, sino autenticación con 
 
 En PowerShell configura la variable de entorno de la sesión:
 
-```powershell
-$env:ANTHROPIC_API_KEY="pega_aqui_tu_api_key"
+```cmd
+set ANTHROPIC_API_KEY=sk-ant-api03-.......
 ```
 
 Para verificar, puedes ejecutar:
 
-```powershell
-echo $env:ANTHROPIC_API_KEY
+```cmd
+echo $ANTHROPIC_API_KEY
 ```
 
 Si ves un valor cargado, la variable quedó disponible para esa sesión.
@@ -72,7 +72,7 @@ Si ves un valor cargado, la variable quedó disponible para esa sesión.
 
 Desde la carpeta del proyecto ejecuta:
 
-```powershell
+```cmd
 claude
 ```
 
