@@ -10,8 +10,8 @@ Laboratorio guiado en parejas o individual.
 
 ## Actividades
 
-- Actividad 1: hacer fork del repositorio base
-- Actividad 2: clonar el fork localmente
+- Actividad 1: copiar el repositorio base a una cuenta personal
+- Actividad 2: clonar la copia personal localmente
 - Actividad 3: crear `CLAUDE.md` y `MEMORY.md`
 - Actividad 4: identificar otros archivos útiles para contexto
 - Actividad 5: practicar comandos principales de Claude Code
@@ -25,7 +25,7 @@ Laboratorio guiado en parejas o individual.
 
 Al terminar la práctica, el estudiante debe poder:
 
-- hacer fork y clonar un repositorio real
+- copiar un repositorio real a una cuenta personal y clonarlo
 - crear archivos de contexto iniciales
 - explicar para qué sirve cada archivo
 - usar comandos básicos de Claude Code relacionados con proyecto y memoria

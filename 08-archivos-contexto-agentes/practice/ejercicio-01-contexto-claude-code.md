@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Hacer fork del repositorio `multihope`, clonarlo localmente y crear archivos de contexto que ayuden a Claude Code a entender mejor el proyecto.
+Copiar el repositorio `multihope` a una cuenta personal de GitHub, clonarlo localmente y crear archivos de contexto que ayuden a Claude Code a entender mejor el proyecto.
 
 ## Duración sugerida
 
@@ -12,15 +12,22 @@ Hacer fork del repositorio `multihope`, clonarlo localmente y crear archivos de 
 
 - Original: [amartinez2b/multihope](https://github.com/amartinez2b/multihope)
 
-## Parte A - Hacer fork en tu cuenta personal
+## Parte A - Copiar el repositorio a tu cuenta personal
 
 En GitHub:
 
 1. entra al repositorio original
-2. haz clic en `Fork`
-3. crea una copia en tu cuenta personal
+2. usa la opción para **importar** o **copiar** el repositorio a tu cuenta personal de GitHub
+3. confirma que el nuevo repositorio quede publicado bajo tu usuario
+4. verifica que la URL final sea algo como:
 
-## Parte B - Clonar tu fork localmente
+```text
+https://github.com/TU-USUARIO/multihope.git
+```
+
+La idea de este ejercicio es que trabajes sobre una copia propia del proyecto, no sobre un `fork`.
+
+## Parte B - Clonar tu copia personal localmente
 
 Desde terminal:
 
@@ -190,7 +197,7 @@ La idea no es garantizar que siempre baje drásticamente el número de tokens, s
 
 El estudiante debe dejar preparado el repositorio con:
 
-- fork en GitHub
+- copia del repositorio en GitHub bajo la cuenta personal
 - clon local
 - archivo `CLAUDE.md` generado con `/init` y luego ajustado
 - archivo `MEMORY.md`
@@ -202,7 +209,7 @@ El estudiante debe dejar preparado el repositorio con:
 
 El estudiante debe entregar:
 
-1. URL de su fork
+1. URL de su repositorio personal copiado
 2. evidencia de clonación local
 3. evidencia de haber ejecutado `/init`
 4. contenido final de `CLAUDE.md`
