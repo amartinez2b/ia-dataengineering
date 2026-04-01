@@ -19,6 +19,7 @@ Laboratorio guiado en parejas o individual.
 ## Material de esta sección
 
 - [Ejercicio 01 - Preparar contexto persistente para Claude Code](./ejercicio-01-contexto-claude-code.md)
+- [Ejercicio 02 - Instalar Obsidian para gestionar conocimiento generado por IA](./ejercicio-02-obsidian-conocimiento-ia.md)
 
 ## Criterio de éxito
 
@@ -28,3 +29,4 @@ Al terminar la práctica, el estudiante debe poder:
 - crear archivos de contexto iniciales
 - explicar para qué sirve cada archivo
 - usar comandos básicos de Claude Code relacionados con proyecto y memoria
+- usar Obsidian para organizar ideas, prompts, decisiones y hallazgos técnicos
