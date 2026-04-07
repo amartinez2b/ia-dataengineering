@@ -6,6 +6,7 @@ Usar agentes de IA para desarrollar un DAG de Airflow que orqueste el pipeline c
 
 El DAG debe coordinar:
 
+- el flujo ya existente de `customers`
 - carga `raw -> bronze` para `products`, `sales` y `shops`
 - limpieza `bronze -> silver` para `products`, `sales` y `shops`
 - consolidación final de la tabla `comercial` en `gold`
@@ -34,6 +35,7 @@ Trabaja sobre el mismo repositorio personal que usaste en el módulo 11, idealme
 Antes de pedir código al agente, asegúrate de tener claro:
 
 - dónde están los scripts PySpark creados en el tema 11
+- cómo está implementado actualmente el flujo de `customers`
 - qué notebooks sirven como apoyo o validación
 - qué tabla final se genera en `gold`
 - qué dependencias existen entre las etapas
@@ -50,9 +52,10 @@ Actúa como un arquitecto de datos experto en Airflow y PySpark.
 
 # Contexto
 Tengo un proyecto de ingeniería de datos con un flujo:
+- `raw -> bronze -> silver` ya implementado para `customers`
 - `raw -> bronze` para `products`, `sales` y `shops`
 - `bronze -> silver` para `products`, `sales` y `shops`
-- consolidación final `gold/comercial`
+- consolidación final `gold/comercial` usando también `customers`
 
 # Objetivo
 Ayúdame a diseñar un DAG de Airflow para orquestar este pipeline.
@@ -75,6 +78,8 @@ Ayúdame a diseñar un DAG de Airflow para orquestar este pipeline.
 
 Como mínimo, el DAG debe contemplar tareas equivalentes a estas:
 
+- `bronze_customers`
+- `silver_customers`
 - `bronze_products`
 - `bronze_sales`
 - `bronze_shops`
@@ -91,10 +96,12 @@ Antes de pedir el archivo Python del DAG, usa este diagrama como referencia visu
 
 ```mermaid
 flowchart TD
+    bronze_customers["bronze_customers"] --> silver_customers["silver_customers"]
     bronze_products["bronze_products"] --> silver_products["silver_products"]
     bronze_sales["bronze_sales"] --> silver_sales["silver_sales"]
     bronze_shops["bronze_shops"] --> silver_shops["silver_shops"]
 
+    silver_customers --> gold_comercial["gold_comercial"]
     silver_products --> gold_comercial["gold_comercial"]
     silver_sales --> gold_comercial
     silver_shops --> gold_comercial
@@ -103,9 +110,10 @@ flowchart TD
 ### Cómo interpretar el gráfico
 
 - cada nodo representa una tarea del DAG
+- `customers` ya existe en el proyecto y debe usarse como referencia para replicar el patrón en las demás tablas
 - las tareas `bronze_*` deben ejecutarse antes que sus correspondientes `silver_*`
 - la tarea `gold_comercial` depende de que todas las tablas `silver` necesarias hayan sido generadas correctamente
-- si el proyecto requiere una cuarta tabla antes de construir `gold_comercial`, debes agregarla al grafo y justificarla
+- la tabla `customers` también forma parte del flujo que alimenta `gold_comercial`
 
 ## Parte D - Pedir el archivo del DAG
 
@@ -127,7 +135,7 @@ Una vez validado el diseño, pide al agente que genere el archivo Python del DAG
 Actúa como un ingeniero de datos senior experto en Airflow.
 
 # Contexto
-Ya tengo definido el pipeline PySpark del proyecto y ya validé las tareas del DAG.
+Ya tengo definido el pipeline PySpark del proyecto. El flujo de `customers` ya existe y debo replicar ese patrón para `products`, `sales` y `shops`, además de orquestar la consolidación final.
 
 # Objetivo
 Genera el archivo Python del DAG de Airflow para orquestar el flujo completo.
@@ -135,6 +143,7 @@ Genera el archivo Python del DAG de Airflow para orquestar el flujo completo.
 # Requisitos
 - usa una estructura simple y mantenible
 - refleja tareas reales del proyecto
+- toma como referencia el flujo existente de `customers`
 - modela correctamente las dependencias entre `bronze`, `silver` y `gold`
 - usa nombres de tareas claros
 - agrega comentarios mínimos útiles
@@ -183,8 +192,9 @@ El estudiante debe poder explicar, usando el DAG:
 
 1. qué tareas construyen `bronze`
 2. qué tareas construyen `silver`
-3. por qué `gold_comercial` debe ejecutarse al final
-4. qué ocurriría si una tarea `silver` falla
+3. cómo el flujo de `customers` sirve de patrón para las demás tablas
+4. por qué `gold_comercial` debe ejecutarse al final
+5. qué ocurriría si una tarea `silver` falla
 
 ## Parte G - Actividad adicional opcional
 

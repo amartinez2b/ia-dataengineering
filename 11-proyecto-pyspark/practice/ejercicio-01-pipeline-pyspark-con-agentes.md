@@ -74,7 +74,8 @@ Identificar:
 - scripts existentes
 - datasets o rutas de entrada
 - carpetas donde conviene crear código nuevo
-- cuál es la cuarta tabla del dominio comercial que ya existe o que debe inferirse desde el proyecto
+- cómo está implementado el flujo de `customers`
+- cómo replicar ese patrón para `products`, `sales` y `shops`
 
 ### Prompt base sugerido
 
@@ -91,7 +92,8 @@ Analiza el repositorio y explícame:
 - qué carpetas, notebooks y scripts son relevantes para un pipeline PySpark
 - dónde conviene implementar una capa `bronze`, `silver` y `gold`
 - qué tablas de negocio aparecen en el proyecto
-- cuál podría ser la cuarta tabla que complemente `products`, `sales` y `shops` para construir una tabla final `comercial`
+- cómo está resuelto el flujo de `customers`
+- cómo puedo usar `customers` como referencia para replicar el proceso en `products`, `sales` y `shops`
 
 # Restricciones
 - no inventes archivos si no están justificados por la estructura del repositorio
@@ -203,11 +205,10 @@ En esta etapa debes combinar **cuatro tablas** para producir una estructura fina
 
 Como mínimo deben estar:
 
+- `customers`
 - `products`
 - `sales`
 - `shops`
-
-La cuarta tabla debe ser identificada por el estudiante durante el análisis inicial del repositorio o definida con justificación técnica clara si el proyecto requiere crearla.
 
 ### Qué debe resolver esta etapa
 
@@ -223,13 +224,12 @@ La cuarta tabla debe ser identificada por el estudiante durante el análisis ini
 Actúa como un arquitecto de datos con experiencia en modelado analítico.
 
 # Contexto
-Ya existen tablas `silver` para `products`, `sales` y `shops`. Debo construir una tabla final `comercial` en `gold` combinando cuatro tablas del dominio comercial.
+Ya existen o existirán tablas `silver` para `customers`, `products`, `sales` y `shops`. Debo construir una tabla final `comercial` en `gold` combinando estas cuatro tablas del dominio comercial.
 
 # Objetivo
 Propón y genera la lógica PySpark para construir la tabla `comercial`.
 
 # Requisitos
-- justifica la cuarta tabla que se va a usar
 - explica las llaves de join
 - define las columnas finales orientadas a análisis comercial
 - mantén el resultado consistente con la estructura real del proyecto
@@ -292,7 +292,7 @@ Debe presentar:
 2. nombre de la rama `dev`
 3. lista de archivos creados o modificados
 4. explicación breve del flujo `raw -> bronze -> silver -> gold`
-5. justificación de la cuarta tabla usada para `comercial`
+5. explicación de cómo se reutilizó el patrón de `customers`
 6. evidencia de uso de agentes de IA
 7. resultado final esperado de la tabla `comercial`
 
