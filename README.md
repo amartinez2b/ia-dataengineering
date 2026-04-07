@@ -53,7 +53,11 @@ Para seguir el curso de forma práctica se recomienda contar con el siguiente en
 
 ## Duración estimada
 
-El curso está compuesto por **17 módulos de 1.5 horas cada uno**, para una duración total estimada de **25.5 horas**.
+El curso está compuesto por **17 sesiones**, cada una con una duración de **1.5 horas**, para una duración total estimada de **25.5 horas**.
+
+## Costo
+
+El costo por participante es de **$250**.
 
 ## Resultados esperados
 
