@@ -91,7 +91,32 @@ Para este ejercicio vamos a usar:
 
 porque el flujo del tema 12 ya está modelado de forma muy cercana a un grafo.
 
-## Parte D - Definir el flujo que se va a diagramar
+## Parte D - Validar que el MCP fue instalado correctamente
+
+Antes de diagramar el flujo completo del tema 12, realiza una prueba mínima.
+
+Abre Claude Code y usa este prompt:
+
+````markdown
+Usa la herramienta `open_drawio_mermaid` para abrir este diagrama:
+
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Prueba MCP Draw.io]
+```
+````
+
+### Qué deberías observar
+
+Si el MCP está bien instalado, Claude Code debería:
+
+- detectar la herramienta `open_drawio_mermaid`
+- ejecutar el servidor `drawio`
+- abrir o generar el diagrama de prueba
+
+Si esta prueba funciona, entonces ya puedes pasar al diagrama completo del DAG.
+
+## Parte E - Definir el flujo que se va a diagramar
 
 Antes de invocar el MCP, toma como referencia el DAG del tema 12.
 
@@ -110,7 +135,7 @@ flowchart TD
     silver_shops --> gold_comercial
 ```
 
-## Parte E - Pedir al agente que use el MCP
+## Parte F - Pedir al agente que use el MCP
 
 Ahora abre Claude Code y dale una instrucción explícita para que use la herramienta `open_drawio_mermaid`.
 
@@ -135,7 +160,7 @@ El flujo representa el DAG del tema 12 y contiene estas tareas:
 Genera el diagrama en draw.io a partir de Mermaid y ábrelo para revisión.
 ```
 
-## Parte F - Ajustar el diagrama
+## Parte G - Ajustar el diagrama
 
 Una vez que el MCP abra el diagrama, revisa:
 
@@ -150,7 +175,7 @@ Si hace falta, pide al agente una segunda versión del Mermaid con:
 - agrupación por capa
 - nombres más legibles
 
-## Parte G - Abrir el archivo `.drawio` en Visual Studio Code
+## Parte H - Abrir el archivo `.drawio` en Visual Studio Code
 
 Además del uso del MCP, en este ejercicio también vas a preparar Visual Studio Code para abrir archivos `.drawio`.
 
@@ -194,16 +219,17 @@ El objetivo es que puedas:
 - confirmar dependencias
 - dejar el diagrama como parte de la documentación técnica del proyecto
 
-## Parte H - Validación final
+## Parte I - Validación final
 
 El estudiante debe comprobar:
 
+- que la prueba mínima `A -> B` funcionó
 - que el MCP generó el diagrama correctamente
 - que Visual Studio Code puede abrir el archivo `.drawio`
 - que el flujo visual coincide con el DAG del tema 12
 - que `customers` aparece como patrón existente y `gold_comercial` como resultado final
 
-## Parte I - Mejora opcional
+## Parte J - Mejora opcional
 
 Si hay tiempo, pide un diagrama más expresivo que separe visualmente:
 
@@ -219,9 +245,10 @@ El estudiante debe presentar:
 
 1. evidencia de instalación del MCP `drawio`
 2. evidencia de instalación de la extensión `Draw.io Integration` en Visual Studio Code
-3. el prompt usado en Claude Code
-4. el diagrama generado
-5. una breve explicación del flujo representado
+3. evidencia de la prueba mínima `A -> B`
+4. el prompt usado en Claude Code
+5. el diagrama generado
+6. una breve explicación del flujo representado
 
 ## Criterio de éxito
 
@@ -229,6 +256,7 @@ El ejercicio está completo si el estudiante logra:
 
 - instalar correctamente `@drawio/mcp`
 - instalar la extensión `Draw.io Integration` en Visual Studio Code
+- validar el MCP con el diagrama mínimo de prueba
 - usar `open_drawio_mermaid` desde Claude Code
 - generar un diagrama visual del flujo del DAG
 - abrir el archivo `.drawio` en Visual Studio Code

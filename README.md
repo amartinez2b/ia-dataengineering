@@ -48,7 +48,7 @@ Para seguir el curso de forma práctica se recomienda contar con el siguiente en
 | 13 | Skills y automatización del desarrollo | Qué son los Skills. Cómo crear skills reutilizables para pipelines de datos. Automatización de tareas repetitivas. | Crear skills para generar pipelines Spark + Airflow automáticamente. | 1.5 |
 | 14 | Introducción a MCP (Model Context Protocol) | Qué es MCP. Arquitectura cliente-servidor. Herramientas MCP. Casos de uso en ingeniería de datos. | Entender cómo conectar LLMs con herramientas externas. | 1.5 |
 | 15 | Integración de herramientas mediante MCP | Conectar MCP con repositorios, bases de datos o documentación. Automatización del contexto. | Integrar herramientas reales con agentes de programación. | 1.5 |
-| 16 | Ejercicio práctico con MCP | Crear un servidor MCP simple. Integrarlo con un agente. Automatizar generación de código. | Construir un flujo de desarrollo extendido con IA. | 1.5 |
+| 16 | Arquitectura on premise segura para IA | Componentes de infraestructura, segmentación, identidad, secretos, control de acceso a bases, observabilidad, auditoría y prevención de fuga de información. | Diseñar una arquitectura on premise segura para incorporar IA en procesos internos. | 1.5 |
 | 17 | Proyecto final | Construcción de un pipeline completo: ingestión -> transformación PySpark -> orquestación Airflow -> desarrollo asistido con agentes. | Aplicar todos los conceptos del curso en un proyecto real. | 1.5 |
 
 ## Duración estimada

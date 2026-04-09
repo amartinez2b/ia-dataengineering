@@ -1,0 +1,51 @@
+<svg width="1500" height="900" viewBox="0 0 1500 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1500" height="900" fill="#F5F3EE"/>
+  <text x="84" y="92" fill="#1F2833" font-family="Arial, sans-serif" font-size="36" font-weight="700">Plataforma Gobernada de LLMs con Router</text>
+  <text x="84" y="130" fill="#5E6570" font-family="Arial, sans-serif" font-size="20">El router se ubica entre aplicaciones/agentes y los modelos, aplicando gobierno, costo y selección dinámica</text>
+
+  <rect x="90" y="212" width="270" height="122" rx="22" fill="#DCEBFA" stroke="#759ED0" stroke-width="2"/>
+  <text x="122" y="260" fill="#1D3F62" font-family="Arial, sans-serif" font-size="28" font-weight="700">Usuarios y Apps</text>
+  <text x="122" y="296" fill="#1D3F62" font-family="Arial, sans-serif" font-size="18">Analistas, agentes,</text>
+  <text x="122" y="322" fill="#1D3F62" font-family="Arial, sans-serif" font-size="18">copilots y APIs internas</text>
+
+  <rect x="430" y="186" width="400" height="176" rx="24" fill="#FFF2CF" stroke="#C49F4D" stroke-width="3"/>
+  <text x="464" y="238" fill="#604512" font-family="Arial, sans-serif" font-size="30" font-weight="700">AI Foundry / Plataforma Gobernada</text>
+  <text x="464" y="278" fill="#604512" font-family="Arial, sans-serif" font-size="19">Catálogo de modelos</text>
+  <text x="464" y="306" fill="#604512" font-family="Arial, sans-serif" font-size="19">RBAC, políticas, observabilidad</text>
+  <text x="464" y="334" fill="#604512" font-family="Arial, sans-serif" font-size="19">Evaluaciones, despliegue y billing unificado</text>
+
+  <rect x="500" y="430" width="260" height="118" rx="20" fill="#FDE3EB" stroke="#CA839F" stroke-width="2"/>
+  <text x="532" y="476" fill="#61253D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Model Router</text>
+  <text x="532" y="512" fill="#61253D" font-family="Arial, sans-serif" font-size="18">Elige el mejor LLM</text>
+  <text x="532" y="538" fill="#61253D" font-family="Arial, sans-serif" font-size="18">por costo y calidad</text>
+
+  <rect x="930" y="158" width="230" height="118" rx="20" fill="#E7F6E7" stroke="#78A97C" stroke-width="2"/>
+  <text x="966" y="204" fill="#224B28" font-family="Arial, sans-serif" font-size="28" font-weight="700">LLM A</text>
+  <text x="966" y="240" fill="#224B28" font-family="Arial, sans-serif" font-size="18">Rápido y barato</text>
+
+  <rect x="1210" y="158" width="230" height="118" rx="20" fill="#E8EEF8" stroke="#7D92B4" stroke-width="2"/>
+  <text x="1246" y="204" fill="#2A4061" font-family="Arial, sans-serif" font-size="28" font-weight="700">LLM B</text>
+  <text x="1246" y="240" fill="#2A4061" font-family="Arial, sans-serif" font-size="18">Balanceado</text>
+
+  <rect x="930" y="322" width="230" height="118" rx="20" fill="#FDEFD9" stroke="#C99A58" stroke-width="2"/>
+  <text x="966" y="368" fill="#664617" font-family="Arial, sans-serif" font-size="28" font-weight="700">LLM C</text>
+  <text x="966" y="404" fill="#664617" font-family="Arial, sans-serif" font-size="18">Más capaz / premium</text>
+
+  <rect x="1210" y="322" width="230" height="118" rx="20" fill="#EFE4FF" stroke="#8D73C9" stroke-width="2"/>
+  <text x="1246" y="368" fill="#4A317F" font-family="Arial, sans-serif" font-size="28" font-weight="700">LLM D</text>
+  <text x="1246" y="404" fill="#4A317F" font-family="Arial, sans-serif" font-size="18">Especializado</text>
+
+  <rect x="210" y="630" width="1080" height="190" rx="28" fill="#FFFFFF" stroke="#D8D0C5" stroke-width="2"/>
+  <text x="250" y="686" fill="#1E2833" font-family="Arial, sans-serif" font-size="28" font-weight="700">Ventajas financieras y operativas de un proveedor unificado</text>
+  <circle cx="262" cy="736" r="7" fill="#2F7AD8"/><text x="286" y="742" fill="#334150" font-family="Arial, sans-serif" font-size="21">Un solo contrato, una sola factura y mejor control de presupuesto</text>
+  <circle cx="262" cy="778" r="7" fill="#2F7AD8"/><text x="286" y="784" fill="#334150" font-family="Arial, sans-serif" font-size="21">Menor complejidad de integración, credenciales, redes y auditoría</text>
+  <circle cx="776" cy="736" r="7" fill="#2E8B45"/><text x="800" y="742" fill="#334150" font-family="Arial, sans-serif" font-size="21">El router evita sobregastar usando siempre el modelo más caro</text>
+  <circle cx="776" cy="778" r="7" fill="#2E8B45"/><text x="800" y="784" fill="#334150" font-family="Arial, sans-serif" font-size="21">Más fácil aplicar políticas corporativas y observabilidad central</text>
+
+  <path d="M360 272H430" stroke="#5B6776" stroke-width="4" stroke-linecap="round"/>
+  <path d="M630 362V430" stroke="#5B6776" stroke-width="4" stroke-linecap="round"/>
+  <path d="M760 489H930V217" stroke="#5B6776" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M760 489H1210V217" stroke="#5B6776" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M760 489H930V381" stroke="#5B6776" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M760 489H1210V381" stroke="#5B6776" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

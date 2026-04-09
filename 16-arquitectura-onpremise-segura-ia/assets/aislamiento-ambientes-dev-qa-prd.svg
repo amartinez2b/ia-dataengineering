@@ -1,0 +1,67 @@
+<svg width="1500" height="920" viewBox="0 0 1500 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1500" height="920" fill="#F7F4EE"/>
+  <text x="84" y="92" fill="#1F2A36" font-family="Arial, sans-serif" font-size="36" font-weight="700">Aislamiento Total Entre Ambientes: DEV, QA y PRD</text>
+  <text x="84" y="130" fill="#5B6470" font-family="Arial, sans-serif" font-size="20">Cada ambiente debe vivir en su propio segmento de red, con secretos independientes y políticas de acceso distintas</text>
+
+  <rect x="72" y="186" width="412" height="626" rx="28" fill="#EAF3FF" stroke="#7FA8D6" stroke-width="3"/>
+  <text x="106" y="236" fill="#1E4268" font-family="Arial, sans-serif" font-size="30" font-weight="700">DEV</text>
+  <text x="106" y="270" fill="#1E4268" font-family="Arial, sans-serif" font-size="19">Segmento de red independiente</text>
+
+  <rect x="104" y="306" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#A6C3E5" stroke-width="2"/>
+  <text x="132" y="348" fill="#29435C" font-family="Arial, sans-serif" font-size="24" font-weight="700">Acceso humano permitido</text>
+  <text x="132" y="382" fill="#29435C" font-family="Arial, sans-serif" font-size="18">LDAP / Active Directory</text>
+
+  <rect x="104" y="438" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#A6C3E5" stroke-width="2"/>
+  <text x="132" y="480" fill="#29435C" font-family="Arial, sans-serif" font-size="24" font-weight="700">Secretos DEV</text>
+  <text x="132" y="514" fill="#29435C" font-family="Arial, sans-serif" font-size="18">Vault o almacén propio del ambiente</text>
+
+  <rect x="104" y="570" width="350" height="180" rx="18" fill="#FFFFFF" stroke="#A6C3E5" stroke-width="2"/>
+  <text x="132" y="612" fill="#29435C" font-family="Arial, sans-serif" font-size="24" font-weight="700">Uso típico</text>
+  <text x="132" y="650" fill="#29435C" font-family="Arial, sans-serif" font-size="18">Desarrollo, pruebas locales,</text>
+  <text x="132" y="678" fill="#29435C" font-family="Arial, sans-serif" font-size="18">exploración con usuarios reales,</text>
+  <text x="132" y="706" fill="#29435C" font-family="Arial, sans-serif" font-size="18">prompts y agentes experimentales</text>
+
+  <rect x="544" y="186" width="412" height="626" rx="28" fill="#EEF8E9" stroke="#86B282" stroke-width="3"/>
+  <text x="578" y="236" fill="#30592B" font-family="Arial, sans-serif" font-size="30" font-weight="700">QA</text>
+  <text x="578" y="270" fill="#30592B" font-family="Arial, sans-serif" font-size="19">Segmento de red independiente</text>
+
+  <rect x="576" y="306" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#A7C9A2" stroke-width="2"/>
+  <text x="604" y="348" fill="#355035" font-family="Arial, sans-serif" font-size="24" font-weight="700">Acceso controlado</text>
+  <text x="604" y="382" fill="#355035" font-family="Arial, sans-serif" font-size="18">Usuarios limitados + validación</text>
+
+  <rect x="576" y="438" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#A7C9A2" stroke-width="2"/>
+  <text x="604" y="480" fill="#355035" font-family="Arial, sans-serif" font-size="24" font-weight="700">Secretos QA</text>
+  <text x="604" y="514" fill="#355035" font-family="Arial, sans-serif" font-size="18">No compartidos con DEV ni PRD</text>
+
+  <rect x="576" y="570" width="350" height="180" rx="18" fill="#FFFFFF" stroke="#A7C9A2" stroke-width="2"/>
+  <text x="604" y="612" fill="#355035" font-family="Arial, sans-serif" font-size="24" font-weight="700">Uso típico</text>
+  <text x="604" y="650" fill="#355035" font-family="Arial, sans-serif" font-size="18">Pruebas integradas, hardening,</text>
+  <text x="604" y="678" fill="#355035" font-family="Arial, sans-serif" font-size="18">validación de MCP, agentes</text>
+  <text x="604" y="706" fill="#355035" font-family="Arial, sans-serif" font-size="18">y políticas antes de PRD</text>
+
+  <rect x="1016" y="186" width="412" height="626" rx="28" fill="#FFF1F0" stroke="#D8928D" stroke-width="3"/>
+  <text x="1050" y="236" fill="#7A322B" font-family="Arial, sans-serif" font-size="30" font-weight="700">PRD</text>
+  <text x="1050" y="270" fill="#7A322B" font-family="Arial, sans-serif" font-size="19">Segmento de red independiente</text>
+
+  <rect x="1048" y="306" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#E2ABA5" stroke-width="2"/>
+  <text x="1076" y="348" fill="#62322D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Prioridad: service principals</text>
+  <text x="1076" y="382" fill="#62322D" font-family="Arial, sans-serif" font-size="18">Identidades de servicio, no usuarios humanos</text>
+
+  <rect x="1048" y="438" width="350" height="108" rx="18" fill="#FFFFFF" stroke="#E2ABA5" stroke-width="2"/>
+  <text x="1076" y="480" fill="#62322D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Secretos PRD</text>
+  <text x="1076" y="514" fill="#62322D" font-family="Arial, sans-serif" font-size="18">Vault dedicado + rotación estricta</text>
+
+  <rect x="1048" y="570" width="350" height="180" rx="18" fill="#FFFFFF" stroke="#E2ABA5" stroke-width="2"/>
+  <text x="1076" y="612" fill="#62322D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Uso típico</text>
+  <text x="1076" y="650" fill="#62322D" font-family="Arial, sans-serif" font-size="18">Ejecución controlada, accesos</text>
+  <text x="1076" y="678" fill="#62322D" font-family="Arial, sans-serif" font-size="18">mínimos, cuentas técnicas,</text>
+  <text x="1076" y="706" fill="#62322D" font-family="Arial, sans-serif" font-size="18">sin uso directo de credenciales humanas</text>
+
+  <path d="M486 498H542" stroke="#B9C0C7" stroke-width="5" stroke-dasharray="14 14" stroke-linecap="round"/>
+  <path d="M958 498H1016" stroke="#B9C0C7" stroke-width="5" stroke-dasharray="14 14" stroke-linecap="round"/>
+
+  <rect x="316" y="96" width="868" height="56" rx="18" fill="#FFFFFF" stroke="#D7D0C4" stroke-width="2"/>
+  <text x="346" y="132" fill="#4D5661" font-family="Arial, sans-serif" font-size="20">No compartir redes, secretos, usuarios técnicos ni credenciales entre ambientes</text>
+
+  <text x="86" y="864" fill="#6C716F" font-family="Arial, sans-serif" font-size="18">Buenas prácticas: segmentación por ambiente, vault por ambiente, promoción controlada vía CI/CD y accesos humanos restringidos en PRD.</text>
+</svg>
