@@ -97,7 +97,9 @@ Y dentro de Claude Code puedes revisar el estado con:
 
 ## Parte D - Conectarse a la base con el agente
 
-Una vez configurado el MCP, pide al agente que inspeccione la base `fake`.
+Una vez configurado el MCP, pide al agente que inspeccione la base `fake` usando el nombre exacto del servidor configurado:
+
+- `mcp_server_mysql`
 
 ### Prompt base sugerido
 
@@ -106,7 +108,7 @@ Una vez configurado el MCP, pide al agente que inspeccione la base `fake`.
 Actúa como un ingeniero de datos y analista de metadatos.
 
 # Objetivo
-Usa el MCP de MySQL para conectarte a la base `fake` y explorar sus tablas.
+Usa el servidor MCP `mcp_server_mysql` para conectarte a la base `fake` y explorar sus tablas.
 
 # Requisitos
 - identifica todas las tablas disponibles
@@ -140,7 +142,7 @@ El catálogo debe incluir por cada tabla:
 Actúa como un data architect y documentador técnico.
 
 # Objetivo
-Usa el MCP de MySQL para generar un catálogo de datos de todas las tablas de la base `fake`.
+Usa el servidor MCP `mcp_server_mysql` para generar un catálogo de datos de todas las tablas de la base `fake`.
 
 # Requisitos
 - inspecciona las tablas reales
@@ -169,7 +171,7 @@ Pide al agente una vista más analítica del esquema, por ejemplo:
 ### Prompt sugerido
 
 ```markdown
-Analiza el esquema de la base `fake` y dime:
+Usa el servidor MCP `mcp_server_mysql`, analiza el esquema de la base `fake` y dime:
 - qué tablas parecen maestras o de dimensión
 - cuáles parecen transaccionales
 - qué relaciones potenciales ves entre ellas
