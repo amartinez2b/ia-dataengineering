@@ -39,19 +39,26 @@ Abre [GitHub](https://github.com/).
 - verifica el correo electrónico si GitHub lo solicita
 - inicia sesión y confirma que puedes acceder a tu perfil
 
-#### Hacer fork del repositorio del curso
+#### Obtener una copia del repositorio del curso
 
 Una vez dentro de GitHub:
 
 1. Abre el repositorio original del curso: [amartinez2b/ia-dataengineering](https://github.com/amartinez2b/ia-dataengineering)
-2. Haz clic en `Fork`
-3. Crea una copia en tu propia cuenta
+2. Elige una de estas dos opciones:
+   - clonar el repositorio directamente en tu computadora
+   - copiar o importar el repositorio a tu cuenta personal de GitHub y luego clonarlo
 
-El objetivo es que cada estudiante tenga su propia copia del repositorio para trabajar durante el curso.
+El objetivo es que cada estudiante tenga el repositorio disponible para trabajar durante el curso, ya sea solo en local o también en su cuenta personal.
 
 #### Clonar el repositorio a la computadora
 
-Después de hacer el fork, entra a tu copia del repositorio y usa la URL de tu cuenta.
+Si vas a trabajar directamente desde el repositorio original, usa esta URL:
+
+```bash
+git clone https://github.com/amartinez2b/ia-dataengineering.git
+```
+
+Si prefieres tener tu propia copia en GitHub, primero impórtala o cópiala a tu cuenta y luego clónala usando la URL de tu usuario.
 
 Ejemplo:
 
@@ -115,8 +122,8 @@ Abre [DeepSeek Chat](https://chat.deepseek.com/).
 Antes de comenzar la práctica, cada estudiante debería confirmar que puede:
 
 - entrar a su cuenta de GitHub
-- ver su fork del repositorio del curso
-- clonar el repositorio localmente
+- abrir el repositorio del curso
+- clonar el repositorio localmente o ver su copia personal en GitHub
 - abrir al menos una de estas plataformas sin problemas
 - crear una conversación nueva
 - escribir un prompt
@@ -125,7 +132,8 @@ Antes de comenzar la práctica, cada estudiante debería confirmar que puede:
 
 ### Recomendaciones para la clase
 
-- Haz el fork antes de clonar, para que el repositorio quede asociado a tu propia cuenta.
+- Si vas a publicar cambios en tu propia cuenta, primero copia o importa el repositorio y luego clónalo.
+- Si solo necesitas seguir el curso localmente, puedes clonar el repositorio original sin crear una copia en GitHub.
 - Usa una cuenta personal o académica a la que tengas acceso durante toda la capacitación.
 - No compartas contraseñas ni credenciales con otras personas.
 - No pegues secretos, tokens, contraseñas o datos sensibles en el chat.
