@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Practicar el flujo mínimo de Git haciendo un fork del repositorio Multihope a tu cuenta personal de GitHub y trabajando sobre tu propia copia del proyecto.
+Practicar el flujo mínimo de Git importando el repositorio Multihope a tu cuenta personal de GitHub y trabajando sobre tu propia copia del proyecto.
 
 ## Duración sugerida
 
@@ -16,25 +16,26 @@ Practicar el flujo mínimo de Git haciendo un fork del repositorio Multihope a t
 
 ---
 
-## Paso 1 - Hacer fork del repositorio
+## Paso 1 - Importar el repositorio a tu cuenta de GitHub
 
-Un **fork** crea una copia del repositorio en tu cuenta personal de GitHub. A partir de ahí trabajas de forma independiente sin afectar el repositorio original.
+La opción **Import repository** crea un nuevo repositorio en tu cuenta personal a partir de un repositorio existente, conservando su contenido e historial. A partir de ahí trabajas de forma independiente sin afectar el repositorio original.
 
-1. Ingresa a: [https://github.com/amartinez2b/multihope](https://github.com/amartinez2b/multihope)
-2. Haz clic en el botón **Fork** (esquina superior derecha)
-3. Selecciona tu cuenta personal como destino
-4. Deja el nombre `multihope` y haz clic en **Create fork**
+1. Ingresa a: [https://github.com/new/import](https://github.com/new/import)
+2. En **The URL for your source repository**, pega: `https://github.com/amartinez2b/multihope.git`
+3. En **Owner**, selecciona tu cuenta personal
+4. En **Repository name**, escribe `multihope`
+5. Haz clic en **Begin import**
 
 Al terminar, GitHub te redirige a tu propio repositorio:
 ```
 https://github.com/<tu-usuario>/multihope
 ```
 
-A partir de este punto, **todos los pasos se realizan sobre tu fork**.
+A partir de este punto, **todos los pasos se realizan sobre tu repositorio importado**.
 
 ---
 
-## Paso 2 - Clonar tu fork en tu máquina
+## Paso 2 - Clonar tu repositorio importado en tu máquina
 
 Incluye tu usuario de GitHub en la URL para que el sistema de credenciales lo asocie correctamente:
 
@@ -58,7 +59,7 @@ Esta configuración es local: aplica solo a este repositorio y no afecta otros p
 
 ---
 
-## Paso 4 - Verificar que el remote apunta a tu fork
+## Paso 4 - Verificar que el remote apunta a tu repositorio importado
 
 ```bash
 git remote -v
@@ -144,7 +145,7 @@ git commit -m "docs: agrega termino <nombre-del-termino> al glosario del catalog
 
 ---
 
-## Paso 11 - Subir los cambios a tu fork en GitHub
+## Paso 11 - Subir los cambios a tu repositorio en GitHub
 
 ```bash
 git push origin practica/<tu-nombre>
@@ -164,8 +165,8 @@ git log --oneline -n 5
 
 ## Preguntas de reflexión
 
-- ¿Qué diferencia hay entre clonar un repo directamente y hacer un fork primero?
-- ¿Por qué es útil que cada estudiante trabaje sobre su propio fork y no sobre el repositorio original?
+- ¿Qué diferencia hay entre clonar un repo directamente y hacer una importación a tu cuenta primero?
+- ¿Por qué es útil que cada estudiante trabaje sobre su propio repositorio importado y no sobre el repositorio original?
 - Si un agente de IA hiciera cambios en el proyecto sin commits claros, ¿cómo sabrías qué modificó?
 - ¿Qué ventaja tiene que el mensaje de commit describa el archivo y el motivo del cambio?
 
@@ -175,7 +176,7 @@ git log --oneline -n 5
 
 El estudiante debe presentar:
 
-1. la URL de su fork (`https://github.com/<tu-usuario>/multihope`)
+1. la URL de su repositorio importado (`https://github.com/<tu-usuario>/multihope`)
 2. el nombre de su rama (`practica/<tu-nombre>`)
 3. el mensaje de commit usado
 4. el output de `git log --oneline -n 3`

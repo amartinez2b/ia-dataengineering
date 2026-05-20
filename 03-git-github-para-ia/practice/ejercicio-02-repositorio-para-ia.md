@@ -10,7 +10,7 @@ Ejecutar en orden los notebooks del proyecto Multihope para correr el pipeline c
 
 ## Requisitos
 
-- haber completado el Ejercicio 01 (fork clonado y configurado)
+- haber completado el Ejercicio 01 (repositorio importado, clonado y configurado)
 - tener el entorno virtual activado con las dependencias instaladas
 - tener el archivo `.env` configurado con las credenciales de la base de datos
 
