@@ -35,3 +35,6 @@ Al finalizar este módulo, el estudiante podrá:
 ## Mensaje clave
 
 Trabajar con IA sin Git es riesgoso. Git da trazabilidad, control de cambios, reversibilidad y una forma segura de experimentar con asistentes y agentes sin perder el trabajo. 
+
+
+- Cambio 01
