@@ -2,21 +2,21 @@
 
 ## Objetivo del módulo
 
-Comprender cómo usar archivos de contexto persistente para mejorar el trabajo con agentes, especialmente Claude Code, y aprender a estructurar instrucciones de proyecto que ayuden al agente a entender mejor un repositorio.
+Comprender cómo usar archivos de contexto persistente para mejorar el trabajo con agentes, especialmente Claude Code y Codex, y aprender a estructurar instrucciones de proyecto que ayuden al agente a entender mejor un repositorio.
 
 ## Enfoque del módulo
 
-Este módulo es muy práctico y cercano al trabajo real. La meta no es solo conocer qué son `CLAUDE.md` y `MEMORY.md`, sino entender para qué sirven, cuándo conviene crearlos y cómo ayudan a que un agente produzca mejores resultados dentro de un proyecto real.
+Este módulo es muy práctico y cercano al trabajo real. La meta no es solo conocer qué son `CLAUDE.md`, `MEMORY.md` y `AGENTS.md`, sino entender para qué sirven, cuándo conviene crearlos y cómo ayudan a que un agente produzca mejores resultados dentro de un proyecto real.
 
 ## Resultados de aprendizaje
 
 Al finalizar este módulo, el estudiante podrá:
 
 - explicar qué es contexto persistente para un agente
-- diferenciar `CLAUDE.md` y `MEMORY.md`
+- diferenciar `CLAUDE.md`, `MEMORY.md` y `AGENTS.md`
 - identificar otros archivos útiles para dar contexto a un agente
 - crear archivos de contexto dentro de un repositorio real
-- usar comandos principales de Claude Code para trabajar con ese contexto
+- usar comandos principales de Claude Code y flujos equivalentes en Codex para trabajar con ese contexto
 
 ## Estructura
 
@@ -27,7 +27,7 @@ Al finalizar este módulo, el estudiante podrá:
 
 - 20 min: qué es contexto persistente
 - 20 min: `CLAUDE.md`, `MEMORY.md` y otros archivos útiles
-- 15 min: comandos principales de Claude Code
+- 15 min: comandos principales de Claude Code y flujo equivalente en Codex
 - 25 min: ejercicio práctico sobre un repositorio real
 - 10 min: cierre y reflexión
 

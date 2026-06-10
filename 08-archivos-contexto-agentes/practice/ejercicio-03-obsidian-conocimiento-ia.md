@@ -1,4 +1,4 @@
-# Ejercicio 02 - Instalar Obsidian para gestionar conocimiento generado por IA
+# Ejercicio 03 - Instalar Obsidian para gestionar conocimiento generado por IA
 
 ## Objetivo
 
