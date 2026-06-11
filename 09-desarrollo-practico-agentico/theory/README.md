@@ -12,7 +12,19 @@ En la práctica, eso significa:
 - volver a iterar
 - validar antes de integrar
 
-## 2. Cómo pedir tareas complejas
+## 2. Codex como flujo de trabajo
+
+Codex también puede actuar como parte activa del flujo de desarrollo cuando trabaja dentro de un workspace real.
+
+En la práctica, eso significa:
+
+- explorar archivos del proyecto
+- proponer o aplicar cambios
+- ejecutar análisis o revisiones
+- retomar sesiones anteriores
+- iterar hasta cerrar una tarea concreta
+
+## 3. Cómo pedir tareas complejas
 
 Una tarea compleja no debería pedirse como una frase suelta.
 
@@ -47,7 +59,9 @@ El proyecto es de ingeniería de datos y depende de archivos CSV locales.
 El notebook debe ejecutar sin error en el entorno actual.
 ```
 
-## 3. Claude Code para refactorización asistida
+Esto aplica tanto para Claude Code como para Codex.
+
+## 4. Claude Code para refactorización asistida
 
 Claude Code puede ayudar a:
 
@@ -63,7 +77,23 @@ Pero en una refactorización hay que tener cuidado:
 - no romper compatibilidad
 - revisar cuidadosamente diffs y pruebas
 
-## 4. Claude Code para debugging
+## 5. Codex para refactorización asistida
+
+Codex puede ayudar a:
+
+- reorganizar archivos o funciones
+- limpiar código repetido
+- proponer cambios acotados
+- revisar diffs antes de integrar
+- apoyar revisiones puntuales con `codex review`
+
+Al igual que con Claude Code, una buena refactorización asistida requiere:
+
+- alcance claro
+- criterio de validación
+- revisión humana del cambio
+
+## 6. Claude Code para debugging
 
 Una forma útil de usar Claude Code en debugging es pedir:
 
@@ -72,7 +102,19 @@ Una forma útil de usar Claude Code en debugging es pedir:
 - propuesta de corrección
 - pasos de validación después del cambio
 
-## 5. Flujo recomendado de debugging con Claude Code
+## 7. Codex para debugging
+
+Con Codex también conviene trabajar a partir de errores reales y pedir:
+
+- lectura del error
+- hipótesis principales
+- archivos posiblemente implicados
+- corrección sugerida
+- validación posterior
+
+Además, Codex puede ser especialmente útil cuando el debugging exige navegar varios archivos o revisar cambios del repositorio junto con terminal.
+
+## 8. Flujo recomendado de debugging con agentes
 
 1. reproducir el error
 2. capturar mensaje exacto
@@ -81,7 +123,9 @@ Una forma útil de usar Claude Code en debugging es pedir:
 5. validar la solución
 6. volver a probar
 
-## 6. Qué hace bueno a un flujo de trabajo con Claude Code
+Este flujo aplica bien tanto a Claude Code como a Codex.
+
+## 9. Qué hace bueno a un flujo de trabajo agentico
 
 ### Contexto claro
 
@@ -102,23 +146,34 @@ Es mejor decir:
 
 Pequeños pasos suelen funcionar mejor que una instrucción gigante y ambigua.
 
-## 7. Qué no conviene hacer
+### Uso de herramientas concretas
+
+En Claude Code o Codex conviene aprovechar bien la interfaz disponible:
+
+- terminal
+- editor o app visual
+- diffs
+- historial de cambios
+- sesiones anteriores si el flujo lo permite
+
+## 10. Qué no conviene hacer
 
 - delegar cambios enormes sin revisar
 - aceptar todo lo que propone el agente
 - pedir refactors sin criterio de validación
 - ignorar pruebas y errores posteriores
 
-## 8. Buenas prácticas para clase
+## 11. Buenas prácticas para clase
 
 - pedir primero análisis antes de pedir edición
 - trabajar sobre una rama o copia segura
 - revisar cambios antes de aceptar
-- usar Claude Code para acelerar, no para evitar pensar
+- usar Claude Code o Codex para acelerar, no para evitar pensar
+- comparar qué se siente mejor en terminal y qué se siente mejor en interfaz visual
 
-## 9. Ideas clave para llevarse
+## 12. Ideas clave para llevarse
 
-- Claude Code ayuda mucho en tareas complejas si el prompt está bien armado
+- Claude Code y Codex ayudan mucho en tareas complejas si el prompt está bien armado
 - la refactorización asistida necesita revisión humana
 - el debugging con IA funciona mejor con errores reales y contexto concreto
 - usar un agente bien no es delegar ciegamente, sino colaborar con control
