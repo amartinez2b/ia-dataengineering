@@ -26,7 +26,7 @@ El contenido técnico del documento debe cubrir, igual que en el ejercicio 01:
 
 ## Idea clave
 
-A diferencia de Claude Code, en OpenCode la skill se descubre desde rutas del proyecto o del usuario. La forma más simple para este laboratorio es instalarla localmente dentro del repositorio.
+Igual que en Codex, en OpenCode la skill puede descubrirse desde rutas del proyecto o del usuario. La forma más simple para este laboratorio es instalarla localmente dentro del repositorio.
 
 ## Parte A - Crear la carpeta local de skills para OpenCode
 
@@ -155,7 +155,7 @@ Después de que OpenCode genere el documento, valida:
 
 Responde brevemente:
 
-1. ¿Qué cambió al usar la misma skill en OpenCode en lugar de Claude Code?
+1. ¿Qué cambió al usar la misma skill en OpenCode en lugar de Codex?
 2. ¿Qué ventajas tuvo instalar la skill localmente dentro del proyecto?
 3. ¿Qué diferencias notaste en el flujo de uso?
 

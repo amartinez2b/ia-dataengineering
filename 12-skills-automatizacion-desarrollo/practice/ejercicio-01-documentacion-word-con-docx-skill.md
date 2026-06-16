@@ -2,28 +2,21 @@
 
 ## Objetivo
 
-Generar un documento de Word con toda la documentación técnica del proyecto desarrollado en los temas 11 y 12, usando la skill `docx` del repositorio público de Anthropic Skills.
+Usar la skill `docx` en Codex para convertir el archivo Markdown [arquitectura.md](/Users/agus/local/lab/bigdataybi/ia-dataengineering/12-skills-automatizacion-desarrollo/practice/arquitectura.md) en un documento Word `.docx`, tomando como referencia de formato el archivo [msword.docx](/Users/agus/local/lab/bigdataybi/ia-dataengineering/12-skills-automatizacion-desarrollo/practice/msword.docx).
 
-El documento debe describir al menos:
-
-- el proyecto base `multihope`
-- el flujo `raw -> bronze -> silver -> gold`
-- el proceso de `customers` ya existente y su reutilización como patrón
-- la implementación para `products`, `sales` y `shops`
-- la tabla final `gold/comercial`
-- el DAG de Airflow que orquesta el pipeline
+El resultado debe ser un archivo Word profesional que conserve el contenido del Markdown y además incorpore una presentación formal basada en la plantilla de ejemplo.
 
 ## Duración sugerida
 
-40 a 60 minutos
+30 a 45 minutos
 
 ## Requisito de contexto
 
-Este laboratorio supone que el estudiante ya trabajó los temas 11 y 12 y por tanto ya dispone de:
+Este laboratorio supone que el estudiante ya tiene disponible dentro del repositorio:
 
-- el proyecto PySpark desarrollado
-- el DAG de Airflow diseñado o implementado
-- información suficiente para documentar arquitectura, capas y flujo operativo
+- el archivo fuente [arquitectura.md](/Users/agus/local/lab/bigdataybi/ia-dataengineering/12-skills-automatizacion-desarrollo/practice/arquitectura.md)
+- el archivo de referencia [msword.docx](/Users/agus/local/lab/bigdataybi/ia-dataengineering/12-skills-automatizacion-desarrollo/practice/msword.docx)
+- Codex funcionando correctamente
 
 ## Skill que se va a utilizar
 
@@ -32,194 +25,211 @@ Este laboratorio supone que el estudiante ya trabajó los temas 11 y 12 y por ta
 
 ## Importante sobre la instalación
 
-La skill `docx` forma parte del conjunto de skills de documentos. En Claude Code, lo correcto es instalar el plugin:
+Para Codex, la forma más conveniente en este laboratorio es instalar la skill dentro del repositorio para que quede visible como parte del proyecto.
 
-- `document-skills`
+La ruta recomendada es:
 
-No hace falta instalar manualmente solo la carpeta `docx`.
+- `.agents/skills/docx/`
 
-## Parte A - Instalar las skills de documentos en Claude Code
+No conviene copiar solo `SKILL.md`. La skill `docx` necesita también sus scripts asociados para poder trabajar correctamente.
 
-Abre Claude Code y registra el marketplace oficial:
+## Parte A - Crear la carpeta local de skills para Codex
 
-```text
-/plugin marketplace add anthropics/skills
-```
-
-Luego instala el plugin de documentos:
+Dentro del repositorio crea esta estructura:
 
 ```text
-/plugin install document-skills@anthropic-agent-skills
+.agents/
+└── skills/
+    └── docx/
 ```
 
-### Opciones de instalación que aparecerán en pantalla
+Una forma simple de hacerlo es:
 
-Cuando ejecutes ese comando, Claude Code mostrará opciones como estas:
+```bash
+mkdir -p .agents/skills/docx
+```
 
-- `Install for you (user scope)`
-- `Install for all collaborators on this repository (project scope)`
-- `Install for you, in this repo only (local scope)`
+## Parte B - Copiar la skill `docx`
 
-### Qué significa cada opción
+Debes copiar a esa carpeta local el contenido de la skill oficial `docx`.
 
-#### `Install for you (user scope)`
+La carpeta final debería contener al menos:
 
-Instala el plugin para tu usuario, de forma global en tu entorno.
+- `SKILL.md`
+- `scripts/`
+- `LICENSE.txt`
 
-Eso significa que:
+### Estructura esperada
 
-- podrás usarlo en otros repositorios
-- no quedará limitado solo al proyecto actual
-- es la mejor opción si vas a reutilizar la skill durante el curso
+```text
+.agents/
+└── skills/
+    └── docx/
+        ├── SKILL.md
+        ├── LICENSE.txt
+        └── scripts/
+```
 
-### `Install for all collaborators on this repository (project scope)`
+No copies únicamente `SKILL.md`, porque la skill necesita sus scripts para crear y manipular correctamente el documento Word.
 
-Instala el plugin para el repositorio, de modo que otros colaboradores de ese proyecto también puedan aprovechar esa configuración compartida.
+## Parte C - Verificar que Codex descubra la skill
 
-Eso significa que:
+Abre Codex dentro del repositorio y valida que la skill esté disponible.
 
-- queda pensado para trabajo colaborativo dentro del repo
-- tiene sentido cuando un equipo completo necesita la misma capacidad
-- no suele ser la mejor primera opción para un laboratorio individual
+Puedes comprobarlo de cualquiera de estas formas:
 
-### `Install for you, in this repo only (local scope)`
+- usando el selector de skills con `$`
+- verificando si aparece `docx`
+- invocándola explícitamente en el prompt
 
-Instala el plugin solo para ti y solo dentro del repositorio actual.
+Si la skill no aparece, revisa:
 
-Eso significa que:
+- que el directorio se llame exactamente `docx`
+- que exista el archivo `SKILL.md`
+- que la carpeta esté dentro de `.agents/skills/`
+- que Codex haya recargado el workspace o abierto un nuevo thread
 
-- sirve si quieres probar la skill sin dejarla disponible en otros proyectos
-- es útil para pruebas puntuales
-- si cambias a otro repo, tendrás que volver a instalarla allí
+## Parte D - Revisar los archivos de entrada
 
-### Qué opción tomar en este ejercicio
+Antes de invocar la skill, revisa los dos archivos que se usarán en el ejercicio:
 
-Para este laboratorio, la opción recomendada es:
+- contenido fuente: `12-skills-automatizacion-desarrollo/practice/arquitectura.md`
+- plantilla de ejemplo: `12-skills-automatizacion-desarrollo/practice/msword.docx`
 
-- `Install for you (user scope)`
+La idea no es copiar manualmente el contenido a Word, sino pedirle a Codex que:
 
-La razón es que esta skill puede seguir siendo útil en otros módulos o en otros repositorios del curso, especialmente cuando haya que generar documentación técnica adicional.
+- lea el contenido del Markdown
+- tome como referencia visual y estructural el `.docx` de ejemplo
+- genere un nuevo archivo Word bien formateado
 
-### Qué debería pasar
+## Parte E - Confirmar el objetivo del documento
 
-Después de instalarlo, Claude Code ya podrá usar skills de documentos como:
+Antes de pedir el `.docx`, ten claro qué debe hacer el resultado final.
 
-- `docx`
-- `pdf`
-- `pptx`
-- `xlsx`
+El nuevo documento debe:
 
-## Parte B - Confirmar el objetivo del documento
+- conservar y reorganizar correctamente el contenido de `arquitectura.md`
+- apoyarse en `msword.docx` como ejemplo de estilo y formato
+- tener presentación profesional
+- quedar como un archivo `.docx` listo para entregar
 
-Antes de pedir el `.docx`, prepara la lista de secciones que debe contener.
+### No olvidar estas reglas al crear el documento
 
-Se recomienda que el documento tenga como mínimo estas partes:
+- agregar la portada del documento
+- agregar cabecera y pie de página
+- incluir páginas numeradas
+- usar tablas con bordes negros
+- poner en negritas los encabezados de todas las tablas
 
-1. portada
-2. objetivo del proyecto
-3. descripción del repositorio
-4. arquitectura de capas
-5. detalle de tablas `customers`, `products`, `sales` y `shops`
-6. flujo de `raw -> bronze -> silver -> gold`
-7. diseño de la tabla `gold/comercial`
-8. descripción del DAG de Airflow
-9. recomendaciones técnicas o próximos pasos
+## Parte F - Preparar el prompt para la skill
 
-## Parte C - Preparar el prompt para la skill
-
-La forma más clara de usar la skill es pedir explícitamente que Claude use `docx`.
+En Codex, la forma más clara de usar la skill es invocarla explícitamente.
 
 ### Prompt base sugerido
 
 ```markdown
+$docx
+
 # Rol
 Actúa como un arquitecto de datos y redactor técnico senior.
 
-# Instrucción principal
-Usa la skill `docx` para generar un documento Word profesional.
-
 # Objetivo
-Crear un archivo `.docx` con la documentación técnica completa del proyecto desarrollado sobre `multihope`.
+Convierte el archivo `12-skills-automatizacion-desarrollo/practice/arquitectura.md` en un archivo `.docx`.
 
-# Alcance del documento
-Incluye:
-- resumen del proyecto
-- descripción del flujo existente de `customers`
-- explicación de cómo se replicó el patrón para `products`, `sales` y `shops`
-- detalle de las capas `raw`, `bronze`, `silver` y `gold`
-- explicación de la tabla final `comercial`
-- descripción técnica del DAG de Airflow
-- conclusiones y siguientes pasos
+# Referencia de formato
+Usa como referencia visual y estructural el archivo `12-skills-automatizacion-desarrollo/practice/msword.docx`.
+
+# Alcance
+- toma el contenido base desde `arquitectura.md`
+- reorganízalo en un documento Word claro y profesional
+- conserva el sentido técnico original del texto
+- si agregas tablas para resumir información, deben respetar el formato solicitado
 
 # Requisitos
 - el documento debe estar bien estructurado
 - usa títulos y subtítulos claros
-- agrega tablas si ayudan a resumir componentes o capas
+- agrega la portada del documento
+- agrega cabecera y pie de página
+- incluye páginas numeradas
+- todas las tablas deben tener bordes negros
+- los encabezados de todas las tablas deben estar en negritas
 - redacta en español técnico claro
 - el resultado final debe ser un archivo `.docx`
 
 # Formato esperado
 1. propone el nombre del archivo
-2. genera el contenido
+2. indica cómo usarás `arquitectura.md` y `msword.docx`
 3. crea el documento Word
 ```
 
-## Parte D - Enriquecer el prompt
+## Parte G - Enriquecer el prompt
 
 El estudiante debe mejorar el prompt base agregando al menos:
 
-- nombre exacto del proyecto
-- rutas o nombres reales de scripts importantes
-- nombre real del DAG
-- estructura de tablas y capas
-- nivel de detalle esperado
+- nombre final esperado del archivo `.docx`
+- nivel de formalidad del documento
+- si desea conservar o adaptar el estilo de la plantilla
+- si quiere que alguna sección del Markdown se convierta en tabla
+- cualquier detalle extra de portada, cabecera o pie de página
 
-La idea es que el documento no sea genérico, sino fiel al proyecto real.
+La idea es que el documento no sea una conversión plana, sino un entregable bien presentado.
 
-## Parte E - Contenido mínimo esperado del documento
+## Parte H - Qué debe hacer realmente la skill
 
-El documento final debe dejar claro:
+La skill debe ser capaz de:
 
-- qué problema resuelve el proyecto
-- qué hace el flujo existente de `customers`
-- cómo se desarrolló la ingesta para `products`, `sales` y `shops`
-- cómo se aplicó la limpieza a `silver`
-- cómo se construye `gold/comercial`
-- cómo el DAG de Airflow orquesta el pipeline
+- leer el contenido de `arquitectura.md`
+- producir un nuevo `.docx` a partir de ese contenido
+- tomar `msword.docx` como ejemplo de presentación
+- construir un archivo final con formato profesional
+- respetar los requisitos visuales definidos en este ejercicio
 
-## Parte F - Revisión del resultado
+## Parte I - Revisión del resultado
 
 Después de generar el documento, revisa:
 
 - si el archivo `.docx` fue creado correctamente
+- si el contenido de `arquitectura.md` quedó realmente incorporado
+- si la portada fue agregada
+- si existen cabecera y pie de página
+- si las páginas están numeradas
 - si los encabezados están ordenados
+- si las tablas tienen bordes negros
+- si los encabezados de tabla están en negritas
 - si las tablas o listas se leen bien
-- si el texto representa realmente el proyecto
+- si el estilo se acerca al ejemplo `msword.docx`
 - si no hay secciones inventadas o vagas
 
-## Parte G - Mejora opcional
+## Parte J - Mejora opcional
 
 Si hay tiempo, pide una segunda versión del documento con alguna de estas mejoras:
 
-- una tabla resumen de capas y tablas
-- una tabla resumen de tareas del DAG
-- una sección de riesgos técnicos
-- una sección de próximos pasos
+- una portada más formal
+- una tabla resumen de capas de la arquitectura Medallion
+- una tabla comparativa de ventajas y desventajas
+- mejor distribución de estilos entre títulos, tablas y secciones
+- una versión más alineada visualmente con `msword.docx`
 
 ## Entregable
 
 El estudiante debe presentar:
 
-1. evidencia de instalación de `document-skills`
-2. el prompt usado para generar el documento
-3. el archivo `.docx` final
-4. una explicación breve de cómo la skill ayudó en el proceso
+1. evidencia de la carpeta `.agents/skills/docx/`
+2. evidencia de que Codex detectó o usó la skill
+3. evidencia de que usó `arquitectura.md` como contenido fuente
+4. evidencia de que tomó `msword.docx` como referencia de formato
+5. el prompt usado para generar el documento
+6. el archivo `.docx` final
+7. una explicación breve de cómo la skill ayudó en el proceso
 
 ## Criterio de éxito
 
 El ejercicio está completo si el estudiante logra:
 
-- instalar correctamente el plugin `document-skills`
-- invocar la skill `docx`
+- instalar correctamente la skill `docx` en Codex
+- invocar la skill en Codex
+- convertir `arquitectura.md` en un archivo Word
+- usar `msword.docx` como referencia de formato
 - generar un archivo Word válido
-- documentar correctamente el proyecto técnico de los temas 11 y 12
+- incluir portada, cabecera, pie de página y numeración
+- aplicar correctamente el formato de tablas solicitado

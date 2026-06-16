@@ -49,7 +49,31 @@ En este módulo trabajaremos con una skill de documentos:
 
 - `docx`
 
-## 5. Qué hace la skill `docx`
+## 5. Repositorio de referencia para construir skills
+
+Si más adelante se quiere pasar de usar skills a diseñarlas, un repositorio importante de referencia es [openai/skills](https://github.com/openai/skills).
+
+Su importancia está en que permite observar:
+
+- cómo se estructura una skill real
+- qué archivos e instrucciones suelen incluirse
+- cómo se combinan contexto, reglas, scripts y recursos reutilizables
+- qué buenas prácticas pueden seguirse para especializar agentes
+
+En este curso no construiremos skills desde cero, pero sí conviene conocer este repositorio porque ofrece una visión clara de cómo se empaquetan y organizan en proyectos reales.
+
+## 6. Alcance de este curso
+
+El alcance de este curso no es crear skills, sino tener una visión general de su propósito dentro del trabajo con agentes.
+
+Aquí buscamos que el estudiante pueda:
+
+- entender qué es una skill
+- reconocer por qué aporta valor en un flujo de trabajo técnico
+- identificar repositorios y patrones de referencia
+- usar una skill existente dentro de un caso práctico de ingeniería de datos
+
+## 7. Qué hace la skill `docx`
 
 La skill `docx` está pensada para crear, leer, editar o manipular archivos Word `.docx`.
 
@@ -62,7 +86,7 @@ Esto permite convertir el trabajo técnico del pipeline en un entregable formal 
 - clientes internos
 - equipos de soporte o continuidad
 
-## 6. Cómo se integra una skill en Claude Code
+## 8. Cómo se integra una skill en Claude Code
 
 En Claude Code, las skills pueden instalarse desde un marketplace o estar disponibles localmente.
 
@@ -72,7 +96,7 @@ Para la skill `docx`, el punto importante es que forma parte del conjunto:
 
 - `document-skills`
 
-## 7. Qué sigue siendo responsabilidad del estudiante
+## 9. Qué sigue siendo responsabilidad del estudiante
 
 Aunque la skill ayude a crear el documento, el estudiante debe validar:
 
@@ -81,7 +105,7 @@ Aunque la skill ayude a crear el documento, el estudiante debe validar:
 - si el DAG de Airflow quedó bien descrito
 - si el documento tiene estructura clara y usable
 
-## 8. Flujo recomendado de trabajo con skills
+## 10. Flujo recomendado de trabajo con skills
 
 Un flujo útil para este módulo es:
 
@@ -91,7 +115,7 @@ Un flujo útil para este módulo es:
 4. pedir al agente que use la skill
 5. revisar el documento final
 
-## 9. Qué se aprende realmente en este módulo
+## 11. Qué se aprende realmente en este módulo
 
 Más allá de crear un archivo Word, este módulo enseña:
 
@@ -100,7 +124,7 @@ Más allá de crear un archivo Word, este módulo enseña:
 - cómo documentar un proyecto de datos con mejor calidad
 - cómo transformar trabajo técnico en un activo reutilizable
 
-## 10. Ideas clave para llevarse
+## 12. Ideas clave para llevarse
 
 - una skill hace al agente más específico y más útil en un tipo de tarea
 - documentar bien también es parte del desarrollo
