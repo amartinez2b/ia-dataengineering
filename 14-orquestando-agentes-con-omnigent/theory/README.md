@@ -34,7 +34,7 @@ Tomando como base el artículo de Databricks, los principales problemas son esto
 
 ### 2.1 Interfaces incompatibles
 
-Cada harness encapsula al LLM con su propia interfaz, su propia manera de manejar contexto, permisos, archivos y herramientas.
+Cada harness (arnes) encapsula al LLM con su propia interfaz, su propia manera de manejar contexto, permisos, archivos y herramientas.
 
 Eso hace difícil:
 
@@ -161,6 +161,14 @@ La intuición es que, aunque cada harness sea distinto internamente, hacia el us
 
 Sobre esa idea, Omnigent construye una API común.
 
+![Omnigent como capa meta-harness](../assets/omnigent-capa-meta-harness.svg)
+
+El diagrama muestra a Omnigent como una capa intermedia entre:
+
+- los canales de consumo del usuario, como terminal, web, app o APIs
+- las políticas y capacidades transversales, como costos, permisos y colaboración
+- los distintos agentes o harnesses que quedan envueltos por runners con una interfaz común
+
 ### Capacidades principales mencionadas por Databricks
 
 - colaboración en tiempo real
@@ -275,6 +283,15 @@ Por ejemplo:
 Uno se parece más a una plataforma de automatización visual.
 
 El otro se parece más a una capa operativa superior para trabajar con agentes de distintos tipos.
+
+![Integración entre Omnigent, n8n y distintos agentes](../assets/omnigent-n8n-integracion-agentes.svg)
+
+Este diagrama ayuda a ver la separación de responsabilidades:
+
+- los agentes especializados se integran primero con Omnigent
+- Omnigent unifica sesiones, runners, políticas, presupuestos y colaboración
+- n8n se conecta con Omnigent para disparar procesos, integrar APIs y automatizar flujos de negocio
+- usuarios, equipos y sistemas pueden consumir Omnigent de forma directa o dentro de workflows más amplios gestionados por n8n
 
 ## 8. Qué sigue siendo responsabilidad del equipo
 

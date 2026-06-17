@@ -1,0 +1,91 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#F7F3EC"/>
+  <rect x="40" y="34" width="1320" height="832" rx="28" fill="#FFFDFC" stroke="#D9D1C7" stroke-width="2"/>
+
+  <text x="84" y="92" fill="#1C2834" font-family="Arial, sans-serif" font-size="34" font-weight="700">Omnigent como capa de orquestación meta-harness</text>
+  <text x="84" y="126" fill="#5C6570" font-family="Arial, sans-serif" font-size="20">Una capa superior que combina, controla y comparte múltiples agentes y harnesses</text>
+
+  <rect x="86" y="172" width="1228" height="118" rx="24" fill="#EEF4FF" stroke="#86A8D9" stroke-width="2"/>
+  <text x="116" y="214" fill="#223A5C" font-family="Arial, sans-serif" font-size="26" font-weight="700">Cómo se consume Omnigent</text>
+  <text x="116" y="248" fill="#223A5C" font-family="Arial, sans-serif" font-size="18">Los usuarios y equipos acceden a una misma sesión por varios canales sin depender de un solo harness.</text>
+
+  <rect x="116" y="228" width="200" height="44" rx="16" fill="#FFFFFF" stroke="#86A8D9" stroke-width="1.5"/>
+  <text x="152" y="256" fill="#223A5C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Terminal / CLI</text>
+
+  <rect x="344" y="228" width="200" height="44" rx="16" fill="#FFFFFF" stroke="#86A8D9" stroke-width="1.5"/>
+  <text x="392" y="256" fill="#223A5C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Web / App</text>
+
+  <rect x="572" y="228" width="200" height="44" rx="16" fill="#FFFFFF" stroke="#86A8D9" stroke-width="1.5"/>
+  <text x="627" y="256" fill="#223A5C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Mobile</text>
+
+  <rect x="800" y="228" width="200" height="44" rx="16" fill="#FFFFFF" stroke="#86A8D9" stroke-width="1.5"/>
+  <text x="870" y="256" fill="#223A5C" font-family="Arial, sans-serif" font-size="18" font-weight="700">APIs</text>
+
+  <rect x="1028" y="228" width="246" height="44" rx="16" fill="#FFFFFF" stroke="#86A8D9" stroke-width="1.5"/>
+  <text x="1066" y="256" fill="#223A5C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Sesiones compartidas por URL</text>
+
+  <rect x="340" y="344" width="720" height="196" rx="28" fill="#FFF1D8" stroke="#C99F5A" stroke-width="2"/>
+  <text x="386" y="396" fill="#5D3C10" font-family="Arial, sans-serif" font-size="34" font-weight="700">Omnigent Server</text>
+  <text x="386" y="432" fill="#5D3C10" font-family="Arial, sans-serif" font-size="21">Meta-harness que envuelve agentes existentes y les da una interfaz uniforme.</text>
+
+  <rect x="386" y="456" width="142" height="48" rx="16" fill="#FFFFFF" stroke="#C99F5A" stroke-width="1.5"/>
+  <text x="412" y="486" fill="#5D3C10" font-family="Arial, sans-serif" font-size="18" font-weight="700">Composición</text>
+
+  <rect x="546" y="456" width="126" height="48" rx="16" fill="#FFFFFF" stroke="#C99F5A" stroke-width="1.5"/>
+  <text x="582" y="486" fill="#5D3C10" font-family="Arial, sans-serif" font-size="18" font-weight="700">Control</text>
+
+  <rect x="690" y="456" width="156" height="48" rx="16" fill="#FFFFFF" stroke="#C99F5A" stroke-width="1.5"/>
+  <text x="717" y="486" fill="#5D3C10" font-family="Arial, sans-serif" font-size="18" font-weight="700">Colaboración</text>
+
+  <rect x="864" y="456" width="150" height="48" rx="16" fill="#FFFFFF" stroke="#C99F5A" stroke-width="1.5"/>
+  <text x="887" y="486" fill="#5D3C10" font-family="Arial, sans-serif" font-size="18" font-weight="700">Portabilidad</text>
+
+  <rect x="116" y="380" width="180" height="124" rx="22" fill="#E7F8EF" stroke="#6CA37A" stroke-width="2"/>
+  <text x="142" y="418" fill="#204A2B" font-family="Arial, sans-serif" font-size="24" font-weight="700">Políticas</text>
+  <text x="142" y="450" fill="#204A2B" font-family="Arial, sans-serif" font-size="17">Seguridad contextual</text>
+  <text x="142" y="474" fill="#204A2B" font-family="Arial, sans-serif" font-size="17">Permisos dinámicos</text>
+  <text x="142" y="498" fill="#204A2B" font-family="Arial, sans-serif" font-size="17">Aprobación humana</text>
+
+  <rect x="1104" y="380" width="196" height="124" rx="22" fill="#FDE7EE" stroke="#C97D98" stroke-width="2"/>
+  <text x="1132" y="418" fill="#5B2438" font-family="Arial, sans-serif" font-size="24" font-weight="700">Estado y costos</text>
+  <text x="1132" y="450" fill="#5B2438" font-family="Arial, sans-serif" font-size="17">Budget por sesión</text>
+  <text x="1132" y="474" fill="#5B2438" font-family="Arial, sans-serif" font-size="17">Tracking de acciones</text>
+  <text x="1132" y="498" fill="#5B2438" font-family="Arial, sans-serif" font-size="17">Pausas y revisión</text>
+
+  <rect x="94" y="620" width="1212" height="176" rx="26" fill="#F2F7FB" stroke="#9AB3C7" stroke-width="2"/>
+  <text x="124" y="662" fill="#27405A" font-family="Arial, sans-serif" font-size="28" font-weight="700">Agentes y harnesses conectados</text>
+  <text x="124" y="694" fill="#27405A" font-family="Arial, sans-serif" font-size="18">Cada runner envuelve un agente en una sesión uniforme y puede ejecutarlo localmente o en sandbox aislado.</text>
+
+  <rect x="128" y="716" width="200" height="52" rx="18" fill="#FFFFFF" stroke="#9AB3C7" stroke-width="1.5"/>
+  <text x="164" y="748" fill="#27405A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runner + Claude Code</text>
+
+  <rect x="356" y="716" width="180" height="52" rx="18" fill="#FFFFFF" stroke="#9AB3C7" stroke-width="1.5"/>
+  <text x="402" y="748" fill="#27405A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runner + Codex</text>
+
+  <rect x="564" y="716" width="154" height="52" rx="18" fill="#FFFFFF" stroke="#9AB3C7" stroke-width="1.5"/>
+  <text x="617" y="748" fill="#27405A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runner + Pi</text>
+
+  <rect x="746" y="716" width="210" height="52" rx="18" fill="#FFFFFF" stroke="#9AB3C7" stroke-width="1.5"/>
+  <text x="775" y="748" fill="#27405A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runner + OpenAI Agents SDK</text>
+
+  <rect x="984" y="716" width="286" height="52" rx="18" fill="#FFFFFF" stroke="#9AB3C7" stroke-width="1.5"/>
+  <text x="1028" y="748" fill="#27405A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runner + agentes custom / otros harnesses</text>
+
+  <path d="M228 272V318H700V344" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M444 272V318" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M672 272V318" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M900 272V318" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1152 272V318H700V344" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M296 442H340" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1060 442H1104" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M700 540V620" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M700 620H228V716" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 620H446V716" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 620V716" stroke="#5D748C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M700 620H851V716" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 620H1127V716" stroke="#5D748C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="94" y="842" fill="#6E6358" font-family="Arial, sans-serif" font-size="18">Idea visual: Omnigent no sustituye a cada agente, sino que se coloca encima para unificar sesiones, políticas, colaboración y acceso.</text>
+</svg>
