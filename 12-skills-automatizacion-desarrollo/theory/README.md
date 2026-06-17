@@ -1,4 +1,4 @@
-# Teoría - Módulo 13
+# Teoría - Módulo 12
 
 ## 1. ¿Qué es una skill?
 

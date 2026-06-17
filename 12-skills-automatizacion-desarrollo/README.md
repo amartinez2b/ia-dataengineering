@@ -1,4 +1,4 @@
-# Módulo 13 - Skills y automatización del desarrollo
+# Módulo 12 - Skills y automatización del desarrollo
 
 ## Objetivo del módulo
 
