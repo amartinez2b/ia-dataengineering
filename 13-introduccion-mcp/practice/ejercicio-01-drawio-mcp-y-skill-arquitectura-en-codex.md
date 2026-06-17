@@ -90,7 +90,7 @@ codex mcp add drawio -- npx -y @drawio/mcp
 
 - registra un servidor MCP llamado `drawio`
 - usa `npx` para ejecutar el paquete oficial `@drawio/mcp`
-- deja la integración lista para que Codex use herramientas como `open_drawio_mermaid`
+- deja la integración lista para que Codex use herramientas como `open_drawio_xml`
 
 ## Parte D - Verificar el MCP en Codex
 
@@ -104,11 +104,22 @@ codex mcp get drawio
 Luego haz una prueba mínima en Codex:
 
 ````markdown
-Usa la herramienta `open_drawio_mermaid` para abrir este diagrama:
+Usa la herramienta `open_drawio_xml` para abrir este XML de draw.io:
 
-```mermaid
-flowchart TD
-  A[Inicio] --> B[Prueba Draw.io MCP]
+```xml
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Prueba Draw.io MCP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="180" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
 ```
 ````
 
@@ -149,7 +160,7 @@ Quiero que:
 
 ## Parte G - Diagramar la misma arquitectura en draw.io con MCP
 
-Después de tener clara la arquitectura y de haber generado el HTML con la skill, pide a Codex que represente esa misma arquitectura diseñada en draw.io usando Mermaid.
+Después de tener clara la arquitectura y de haber generado el HTML con la skill, pide a Codex que represente esa misma arquitectura diseñada en draw.io usando XML nativo de draw.io.
 
 ### Prompt base sugerido
 
@@ -158,7 +169,7 @@ Después de tener clara la arquitectura y de haber generado el HTML con la skill
 Actúa como un arquitecto de datos.
 
 # Objetivo
-Usa la herramienta `open_drawio_mermaid` del MCP `drawio` para crear un diagrama de la arquitectura descrita en `13-introduccion-mcp/practice/arquitectura.md`.
+Usa la herramienta `open_drawio_xml` del MCP `drawio` para crear un diagrama editable de la arquitectura descrita en `13-introduccion-mcp/practice/arquitectura.md`.
 
 # Contexto
 Primero toma como base el contenido de `13-introduccion-mcp/practice/arquitectura.md` y el diseño de arquitectura que ya generaste con la skill `architecture-diagram`.
@@ -170,7 +181,9 @@ Primero toma como base el contenido de `13-introduccion-mcp/practice/arquitectur
 - debe enfatizar el propósito de calidad, validación y consumo analítico
 
 # Requisitos
-- usa un Mermaid claro y legible
+- genera XML compatible con draw.io o mxGraph
+- usa la herramienta `open_drawio_xml`
+- produce un diagrama editable y, si es posible, un archivo `.drawio`
 - abre el resultado con draw.io para revisión
 - no inventes relaciones que contradigan el documento base
 ```
@@ -201,7 +214,7 @@ El estudiante debe presentar:
 5. el prompt usado para la skill
 6. el archivo `.html` resultante
 7. el prompt usado para draw.io MCP
-8. el diagrama generado en draw.io
+8. el diagrama generado en draw.io o el archivo `.drawio`
 
 ## Criterio de éxito
 
@@ -209,6 +222,6 @@ El ejercicio está completo si el estudiante logra:
 
 - instalar la skill `architecture-diagram-generator` en Codex
 - instalar el MCP `drawio` en Codex
-- validar el uso de `open_drawio_mermaid`
+- validar el uso de `open_drawio_xml`
 - generar un diagrama técnico en HTML basado en `arquitectura.md`
-- diagramar la misma arquitectura diseñada en draw.io
+- diagramar la misma arquitectura diseñada en draw.io o generar su archivo `.drawio`
