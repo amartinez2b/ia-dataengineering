@@ -39,21 +39,19 @@ Para seguir el curso de forma práctica se recomienda contar con el siguiente en
 | 4 | Ingeniería de prompts para desarrollo de software | Cómo estructurar prompts. Contexto, rol, restricciones. Iteración de prompts. Técnicas para generación de código confiable. | Escribir prompts que generen código Python y PySpark de calidad. | 1.5 |
 | 5 | Programación asistida por IA vs programación tradicional | Diferencias entre copiar código vs desarrollar con agentes. Estrategias de colaboración humano-IA. | Adoptar una metodología moderna de desarrollo asistido por IA. | 1.5 |
 | 6 | Introducción a agentes de programación | Qué es un agente de código. Arquitectura básica. Principales herramientas: Claude Code, OpenCode, OpenDevin/OpenCalw, Codex Agents. | Comprender cómo funcionan los agentes autónomos de programación. | 1.5 |
-| 7 | Instalación y configuración de Claude Code | Instalación. Configuración del entorno. Integración con repositorios. Flujo básico de trabajo. | Configurar Claude Code en un entorno real de desarrollo. | 1.5 |
-| 8 | Archivos de contexto para agentes | Uso de archivos como `CLAUDE.md`, `MEMORY.md`, instrucciones de proyecto. Context engineering. | Crear contexto persistente para mejorar la calidad del código generado. | 1.5 |
-| 9 | Desarrollo práctico agentico | Flujo de trabajo con agentes. Cómo pedir tareas complejas. Refactorización asistida. Debugging con IA usando Claude Code y Codex. | Utilizar Claude Code y Codex para desarrollar software real. | 1.5 |
-| 10 | Proyecto práctico 1 - Desarrollo web simple | Crear una página web básica usando Claude Code. Estructura del proyecto. Iteración con IA. | Aprender a coordinar múltiples archivos con agentes. | 1.5 |
-| 11 | Proyecto práctico 2 - Desarrollo PySpark | Generar scripts PySpark con Claude Code. Lectura de datos. Transformaciones. Escritura en Delta/Parquet. | Construir código de ingeniería de datos con IA. | 1.5 |
-| 12 | Desarrollo de pipelines con IA | Uso de IA para generar DAGs de Airflow. Orquestación de pipelines. Testing de pipelines con IA. | Crear un pipeline Spark + Airflow asistido por agentes. | 1.5 |
-| 13 | Skills y automatización del desarrollo | Qué son los Skills. Cómo crear skills reutilizables para pipelines de datos. Automatización de tareas repetitivas. | Crear skills para generar pipelines Spark + Airflow automáticamente. | 1.5 |
-| 14 | Introducción a MCP (Model Context Protocol) | Qué es MCP. Arquitectura cliente-servidor. Herramientas MCP. Casos de uso en ingeniería de datos. | Entender cómo conectar LLMs con herramientas externas. | 1.5 |
-| 15 | Integración de herramientas mediante MCP | Conectar MCP con repositorios, bases de datos o documentación. Automatización del contexto. | Integrar herramientas reales con agentes de programación. | 1.5 |
-| 16 | Arquitectura on premise segura para IA | Componentes de infraestructura, segmentación, identidad, secretos, control de acceso a bases, observabilidad, auditoría y prevención de fuga de información. | Diseñar una arquitectura on premise segura para incorporar IA en procesos internos. | 1.5 |
-| 17 | Proyecto final | Construcción de un pipeline completo: ingestión -> transformación PySpark -> orquestación Airflow -> desarrollo asistido con agentes. | Aplicar todos los conceptos del curso en un proyecto real. | 1.5 |
+| 7 | Agentes Top | Instalación y comparación de Codex, Gemini CLI y OpenCode. Autenticación con API keys. Uso básico desde terminal. | Instalar y probar agentes reales de programación. | 1.5 |
+| 8 | Archivos de contexto para agentes | Uso de archivos como `CLAUDE.md`, `MEMORY.md`, `AGENTS.md` e instrucciones de proyecto. Context engineering. | Crear contexto persistente para mejorar la calidad del trabajo del agente. | 1.5 |
+| 9 | Desarrollo práctico agentico | Flujo de trabajo con agentes. Cómo pedir tareas complejas. Refactorización asistida. Debugging con IA usando Claude Code y Codex. | Utilizar agentes para desarrollar software real. | 1.5 |
+| 10 | Proyecto práctico 2 - Desarrollo PySpark | Extender un proyecto real con procesos `raw -> bronze -> silver -> gold` usando Python, PySpark y notebooks. | Construir un flujo de ingeniería de datos con IA. | 1.5 |
+| 11 | Desarrollo de pipelines con IA | Uso de IA para generar DAGs de Airflow. Orquestación de pipelines. Validación de dependencias. | Crear un pipeline Spark + Airflow asistido por agentes. | 1.5 |
+| 12 | Skills y automatización del desarrollo | Qué son las skills. Instalación y reutilización de skills. Automatización de entregables técnicos. | Usar skills para generar documentos, diagramas y otros entregables técnicos. | 1.5 |
+| 13 | MCP para diagramación y modelado de datos | Qué es MCP. Arquitectura cliente-servidor. Uso de draw.io MCP, MySQL MCP y combinación con skills. | Diseñar una arquitectura y generar un modelo de datos asistidos por agentes. | 1.5 |
+| 14 | Arquitectura on premise segura para IA | Componentes de infraestructura, segmentación, identidad, secretos, control de acceso a bases, observabilidad, auditoría y prevención de fuga de información. | Diseñar una arquitectura on premise segura para incorporar IA en procesos internos. | 1.5 |
+| 15 | Proyecto final | Construcción de un pipeline completo: acceso a datos, transformación, modelado, visualización y documentación asistida por agentes. | Aplicar todos los conceptos del curso en un proyecto real. | 1.5 |
 
 ## Duración estimada
 
-El curso está compuesto por **17 sesiones**, cada una con una duración de **1.5 horas**, para una duración total estimada de **25.5 horas**.
+El curso está compuesto por **15 sesiones**, cada una con una duración de **1.5 horas**, para una duración total estimada de **22.5 horas**.
 
 ## Costo
 

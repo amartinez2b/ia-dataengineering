@@ -1,4 +1,4 @@
-# Módulo 17 - Proyecto final
+# Módulo 15 - Proyecto final
 
 ## Objetivo del módulo
 

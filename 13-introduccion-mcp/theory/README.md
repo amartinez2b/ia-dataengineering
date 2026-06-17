@@ -1,163 +1,171 @@
-# Teoría - Módulo 14
+# Teoría - Módulo 13
 
 ## 1. ¿Qué es MCP?
 
 MCP significa **Model Context Protocol**.
 
-Es un protocolo que permite conectar un modelo o agente con herramientas externas de forma estructurada.
+Es un protocolo que permite conectar un agente con herramientas externas de forma estructurada.
 
-En términos simples, MCP hace posible que un agente:
+En términos prácticos, MCP hace posible que un agente:
 
-- descubra herramientas
-- invoque herramientas
+- descubra herramientas disponibles
+- invoque herramientas concretas
 - reciba resultados de esas herramientas
 - combine esos resultados con su razonamiento
 
-## 2. Qué problema resuelve MCP
-
-Sin MCP, un agente suele trabajar solo con:
-
-- el prompt del usuario
-- los archivos visibles
-- su propia capacidad de razonamiento
-
-Con MCP, el agente puede ampliar sus capacidades usando herramientas como:
-
-- generadores de diagramas
-- conectores a documentación
-- conectores a bases de datos
-- servicios de archivos
-- herramientas de análisis
-
-## 3. Arquitectura básica
+## 2. Arquitectura básica de MCP
 
 En una integración MCP suelen aparecer estos elementos:
 
-- **cliente MCP**: la aplicación que usa el agente, por ejemplo Claude Code
+- **cliente MCP**: la aplicación que usa el agente, por ejemplo Codex o Claude Code
 - **servidor MCP**: el componente que expone herramientas
 - **herramientas**: funciones concretas que el agente puede invocar
-- **usuario**: quien da la tarea o supervisa el resultado
+- **usuario**: quien da la tarea, revisa el resultado y valida la calidad
 
-## 4. Cómo se ve el flujo
-
-Un flujo simplificado es este:
+Un flujo básico se ve así:
 
 1. el usuario pide una tarea
-2. el agente decide que necesita una herramienta
+2. el agente detecta que necesita una herramienta
 3. el cliente llama al servidor MCP
 4. la herramienta responde
-5. el agente integra el resultado
+5. el agente integra el resultado en su trabajo
 
-## 5. Qué valor aporta MCP en ingeniería de datos
+## 3. Qué valor aporta MCP en ingeniería de datos
 
-En ingeniería de datos, MCP puede ayudar a:
+En ingeniería de datos, MCP es útil porque permite que el agente deje de trabajar solo con prompts y archivos.
 
-- documentar pipelines
-- visualizar arquitecturas
-- consultar documentación técnica
-- automatizar contextos
-- conectar agentes con herramientas reales del ecosistema
+Con MCP, el agente puede:
 
-## 6. Qué aprenderemos con draw.io MCP
+- diagramar arquitecturas
+- inspeccionar esquemas de bases de datos
+- consultar metadatos reales
+- generar documentación a partir de fuentes vivas
+- reducir trabajo manual repetitivo
 
-En este módulo usaremos el MCP oficial de draw.io para que el agente pueda abrir diagramas en draw.io a partir de:
+## 4. Por qué conviene combinar skills con MCP
 
-- XML
-- CSV
-- Mermaid
+Una **skill** especializa al agente en una tarea.
 
-Para el laboratorio, la opción más sencilla será usar **Mermaid**, porque ya tenemos un flujo técnico definido desde el DAG del tema 12.
+Un **MCP** le da acceso a una herramienta.
 
-## 7. Funciones principales del MCP de draw.io
+Cuando se combinan, el flujo mejora bastante:
 
-Según la documentación oficial del servidor MCP de draw.io, las funciones principales expuestas son estas:
+- la skill guía cómo pensar el problema
+- el MCP permite ejecutar algo concreto sobre una herramienta real
+
+En este módulo, esa combinación aparece en el ejercicio de arquitectura:
+
+- la skill `architecture-diagram-generator` ayuda a diseñar la arquitectura y producir un entregable HTML
+- draw.io MCP permite abrir y trabajar el diagrama en draw.io a partir de Mermaid
+
+## 5. Qué hace el MCP de draw.io
+
+El MCP oficial de draw.io permite abrir diagramas en draw.io a partir de distintos formatos.
+
+Las funciones principales expuestas por el servidor son:
 
 - `open_drawio_xml`
 - `open_drawio_csv`
 - `open_drawio_mermaid`
 
-### `open_drawio_xml`
-
-Esta función abre draw.io usando contenido XML nativo del formato draw.io o mxGraph.
-
-Sirve cuando:
-
-- quieres control total del diagrama
-- necesitas una estructura más detallada
-- quieres definir manualmente elementos, conexiones o propiedades visuales
-
-En la práctica, es la opción más potente pero también la más compleja.
-
-### `open_drawio_csv`
-
-Esta función toma un contenido tabular en formato CSV y lo transforma en un diagrama.
-
-Sirve cuando:
-
-- tienes información jerárquica o repetitiva
-- quieres construir organigramas
-- quieres convertir una tabla simple en un grafo visual
-
-Puede ser útil si quieres diagramar relaciones de tablas, dominios o estructuras repetidas sin escribir XML.
-
 ### `open_drawio_mermaid`
 
-Esta función toma sintaxis Mermaid y la abre en draw.io.
+Para este curso, la función más útil es:
 
-Sirve cuando:
+- `open_drawio_mermaid`
 
-- ya tienes un flujo descrito como grafo
-- quieres diagramar procesos rápidamente
-- necesitas una forma simple y legible de representar pipelines o DAGs
+porque permite transformar un grafo Mermaid en un diagrama editable dentro de draw.io.
 
-Para este curso, esta es la función más útil porque permite representar muy bien:
+Eso es especialmente valioso para:
 
-- DAGs de Airflow
-- flujos de datos
-- pasos de arquitectura
+- flujos de arquitectura
+- pipelines de datos
+- DAGs
+- modelos conceptuales simples
 
-## 8. Parámetros comunes de estas funciones
+## 6. Qué hace la skill `architecture-diagram-generator`
 
-Las tres funciones comparten una lógica similar de parámetros:
+La skill `architecture-diagram-generator` está pensada para producir diagramas técnicos como archivos `.html` autocontenidos.
 
-- `content`: contenido del diagrama
-- `lightbox`: modo de solo visualización
-- `dark`: modo visual, por ejemplo `auto`, `true` o `false`
+Su valor dentro del curso es que ayuda a:
 
-El parámetro más importante siempre es:
+- estructurar mejor los componentes de una arquitectura
+- decidir zonas, capas y conexiones
+- producir un entregable visual inicial
+- traducir una idea arquitectónica a una representación más clara
 
-- `content`
+En este módulo no reemplaza a draw.io. Lo complementa.
 
-porque ahí va el XML, el CSV o el Mermaid que será transformado en el diagrama.
+## 7. Qué hace el MCP de MySQL
 
-## 9. Cuándo conviene usar cada una
+El MCP de MySQL permite conectar el agente a una base de datos real para inspección y consulta controlada.
 
-Una regla práctica para este curso sería:
+Según la documentación del proyecto, el servidor ofrece:
 
-- usa `open_drawio_mermaid` para flujos, DAGs y procesos
-- usa `open_drawio_csv` para relaciones tabulares sencillas
-- usa `open_drawio_xml` cuando necesites un control visual o estructural más fino
+- una herramienta principal de consulta como `mysql_query`
+- recursos de esquema para tablas, columnas, índices y relaciones detectadas
+
+Eso permite que el agente pueda:
+
+- listar tablas
+- revisar columnas y tipos
+- identificar claves aparentes
+- observar relaciones potenciales
+- resumir un esquema real
+
+## 8. Cómo pasar de tablas reales a un modelo de datos
+
+Un modelo de datos inicial no nace de adivinar. Nace de observar:
+
+- nombres de tablas
+- nombres de columnas
+- tipos de datos
+- claves aparentes
+- relaciones potenciales
+
+Con ayuda del MCP de MySQL, el agente puede proponer:
+
+- entidades principales
+- posibles dimensiones y tablas transaccionales
+- relaciones candidatas
+- cardinalidades probables
+- advertencias cuando algo no es concluyente
+
+En este curso, eso se traduce en un modelo de datos técnico inicial, no en una “verdad absoluta” del negocio.
+
+## 9. Qué precauciones hay que tomar
+
+Cuando se conecta un agente a herramientas reales, hay que cuidar:
+
+- no guardar credenciales sensibles en el repositorio
+- usar accesos de solo lectura cuando sea posible
+- no permitir operaciones destructivas sin justificación
+- validar que el diagrama o modelo generado sí representa la realidad
+- distinguir entre relación confirmada y relación inferida
 
 ## 10. Qué sigue siendo responsabilidad del estudiante
 
-Aunque el MCP permita crear un diagrama automáticamente, el estudiante debe validar:
+Aunque MCP acelera mucho el trabajo, el estudiante sigue siendo responsable de validar:
 
-- si el flujo representado es correcto
-- si las dependencias del DAG están bien dibujadas
-- si los nombres de tareas coinciden con el proyecto
-- si el diagrama es útil para comunicar el pipeline
+- si la arquitectura propuesta tiene sentido técnico
+- si el diagrama comunica bien el flujo
+- si el modelo de datos no inventa relaciones dudosas
+- si el agente interpretó correctamente tablas y columnas
+- si el resultado final sirve para otra persona del equipo
 
 ## 11. Qué se aprende realmente en este módulo
 
-Más allá de instalar una herramienta, este módulo enseña:
+Más allá de instalar herramientas, este módulo enseña:
 
-- cómo extender un agente con herramientas externas
-- cómo pensar en integración y no solo en prompting
-- cómo traducir una estructura técnica a una representación visual
+- cómo extender un agente con capacidades operativas reales
+- cómo combinar prompting, skills y herramientas externas
+- cómo transformar metadatos en documentación útil
+- cómo pasar de una idea técnica a un entregable visual o estructural
 
 ## 12. Ideas clave para llevarse
 
 - MCP hace que un agente sea más operativo
-- un servidor MCP expone capacidades concretas
-- el agente sigue necesitando contexto y validación humana
-- visualizar un pipeline ayuda a entenderlo y comunicarlo mejor
+- una skill y un MCP resuelven problemas distintos y complementarios
+- draw.io MCP sirve muy bien para diagramar a partir de Mermaid
+- MySQL MCP permite inspeccionar datos reales y no solo imaginar su estructura
+- la validación humana sigue siendo indispensable
