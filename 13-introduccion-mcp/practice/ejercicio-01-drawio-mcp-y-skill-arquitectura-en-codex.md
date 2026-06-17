@@ -9,19 +9,24 @@ Instalar en Codex:
 
 Luego usar ambas capacidades para:
 
-1. diseñar una arquitectura de datos
-2. generar un diagrama técnico en HTML con la skill
-3. abrir y diagramar la misma arquitectura en draw.io usando el MCP
+1. leer el documento [arquitectura.md](/Users/agus/local/lab/bigdataybi/ia-dataengineering/13-introduccion-mcp/practice/arquitectura.md)
+2. diseñar una arquitectura de datos basada en ese documento usando la skill
+3. generar un diagrama técnico en HTML con la skill
+4. crear en draw.io el diagrama de esa misma arquitectura diseñada usando el MCP
 
-## Caso de arquitectura sugerido
+## Documento base del ejercicio
 
-Para este laboratorio, usa una arquitectura de ciclo de vida de datos con estos componentes:
+El insumo principal de este laboratorio es el archivo:
 
-- Oracle como sistema fuente
-- Spark para ingesta y procesamiento
-- capas `raw`, `bronze`, `silver` y `gold`
-- Airflow como orquestador opcional
-- Power BI como capa de consumo analítico
+- `13-introduccion-mcp/practice/arquitectura.md`
+
+Ese documento describe una arquitectura tipo Medallion y debe ser la base para todo el ejercicio.
+
+La idea no es inventar una arquitectura distinta, sino:
+
+1. leer y entender el contenido de `arquitectura.md`
+2. usar la skill `architecture-diagram-generator` para diseñar el diagrama de esa arquitectura
+3. usar el MCP `drawio` para crear el diagrama visual de la arquitectura ya diseñada
 
 ## Duración sugerida
 
@@ -109,32 +114,42 @@ flowchart TD
 
 Si esta prueba funciona, el MCP ya está listo.
 
-## Parte E - Diseñar la arquitectura con la skill
+## Parte E - Revisar el documento de arquitectura
 
-Ahora usa la skill para diseñar la arquitectura y producir el entregable HTML.
+Antes de usar la skill, abre y revisa:
+
+- `13-introduccion-mcp/practice/arquitectura.md`
+
+Debes identificar al menos:
+
+- objetivo de la arquitectura
+- capas principales `bronze`, `silver` y `gold`
+- propósito de cada capa
+- ventajas, desventajas y recomendaciones
+
+## Parte F - Diseñar la arquitectura con la skill
+
+Ahora usa la skill para diseñar el diagrama de la arquitectura descrita en `arquitectura.md` y producir el entregable HTML.
 
 ### Prompt base sugerido
 
 ```markdown
 $architecture-diagram
 
-Diseña una arquitectura de datos con estas características:
+Lee el archivo `13-introduccion-mcp/practice/arquitectura.md` y, basándote en ese contenido, diseña un diagrama técnico de la arquitectura descrita allí.
 
-- Oracle como fuente transaccional
-- Spark para ingesta desde Oracle
-- capa `raw` como landing inicial
-- capa `bronze` para estandarización inicial
-- capa `silver` para limpieza y validación
-- capa `gold` para datasets analíticos
-- Power BI como consumo final
-- Airflow como orquestador opcional
+Quiero que:
 
-Quiero que generes un archivo `.html` autocontenido con un diagrama técnico profesional.
+- uses el documento como fuente principal de contexto
+- representes claramente las capas `bronze`, `silver` y `gold`
+- reflejes el ciclo de vida de los datos y el propósito de cada capa
+- generes un archivo `.html` autocontenido con un diagrama técnico profesional
+- no inventes componentes ajenos al documento salvo que los marques explícitamente como apoyo visual
 ```
 
-## Parte F - Diagramar la misma arquitectura en draw.io con MCP
+## Parte G - Diagramar la misma arquitectura en draw.io con MCP
 
-Después de tener clara la arquitectura, pide a Codex que represente ese mismo diseño en draw.io usando Mermaid.
+Después de tener clara la arquitectura y de haber generado el HTML con la skill, pide a Codex que represente esa misma arquitectura diseñada en draw.io usando Mermaid.
 
 ### Prompt base sugerido
 
@@ -143,22 +158,24 @@ Después de tener clara la arquitectura, pide a Codex que represente ese mismo d
 Actúa como un arquitecto de datos.
 
 # Objetivo
-Usa la herramienta `open_drawio_mermaid` del MCP `drawio` para abrir un diagrama de arquitectura.
+Usa la herramienta `open_drawio_mermaid` del MCP `drawio` para crear un diagrama de la arquitectura descrita en `13-introduccion-mcp/practice/arquitectura.md`.
+
+# Contexto
+Primero toma como base el contenido de `13-introduccion-mcp/practice/arquitectura.md` y el diseño de arquitectura que ya generaste con la skill `architecture-diagram`.
 
 # Arquitectura a representar
-- Oracle es la fuente
-- Spark realiza ingesta y procesamiento
-- el flujo pasa por `raw`, `bronze`, `silver` y `gold`
-- Power BI consume la capa `gold`
-- Airflow puede aparecer como orquestador del flujo
+- debe reflejar la arquitectura Medallion descrita en el documento
+- debe mostrar claramente las capas `bronze`, `silver` y `gold`
+- debe representar el flujo progresivo de los datos entre capas
+- debe enfatizar el propósito de calidad, validación y consumo analítico
 
 # Requisitos
 - usa un Mermaid claro y legible
-- organiza visualmente source, processing y consumption
 - abre el resultado con draw.io para revisión
+- no inventes relaciones que contradigan el documento base
 ```
 
-## Parte G - Revisar ambos resultados
+## Parte H - Revisar ambos resultados
 
 Debes validar dos entregables:
 
@@ -167,9 +184,10 @@ Debes validar dos entregables:
 
 Revisa:
 
-- si la arquitectura es coherente
-- si Oracle, Spark, `raw`, `bronze`, `silver`, `gold` y Power BI aparecen correctamente
-- si el diagrama de draw.io refleja la misma lógica del HTML
+- si ambos entregables están realmente basados en `arquitectura.md`
+- si la arquitectura es coherente con el documento fuente
+- si las capas `bronze`, `silver` y `gold` aparecen correctamente
+- si el diagrama de draw.io refleja la misma lógica del HTML generado por la skill
 - si el resultado es claro para otra persona del equipo
 
 ## Entregable
@@ -179,10 +197,11 @@ El estudiante debe presentar:
 1. evidencia de la carpeta `.agents/skills/architecture-diagram/`
 2. evidencia de instalación del MCP `drawio` en Codex
 3. evidencia de la prueba mínima del MCP
-4. el prompt usado para la skill
-5. el archivo `.html` resultante
-6. el prompt usado para draw.io MCP
-7. el diagrama generado en draw.io
+4. evidencia de uso del archivo `13-introduccion-mcp/practice/arquitectura.md`
+5. el prompt usado para la skill
+6. el archivo `.html` resultante
+7. el prompt usado para draw.io MCP
+8. el diagrama generado en draw.io
 
 ## Criterio de éxito
 
@@ -191,5 +210,5 @@ El ejercicio está completo si el estudiante logra:
 - instalar la skill `architecture-diagram-generator` en Codex
 - instalar el MCP `drawio` en Codex
 - validar el uso de `open_drawio_mermaid`
-- generar un diagrama técnico en HTML
-- diagramar la misma arquitectura en draw.io
+- generar un diagrama técnico en HTML basado en `arquitectura.md`
+- diagramar la misma arquitectura diseñada en draw.io
