@@ -46,12 +46,13 @@ Para seguir el curso de forma práctica se recomienda contar con el siguiente en
 | 11 | Desarrollo de pipelines con IA | Uso de IA para generar DAGs de Airflow. Orquestación de pipelines. Validación de dependencias. | Crear un pipeline Spark + Airflow asistido por agentes. | 1.5 |
 | 12 | Skills y automatización del desarrollo | Qué son las skills. Instalación y reutilización de skills. Automatización de entregables técnicos. | Usar skills para generar documentos, diagramas y otros entregables técnicos. | 1.5 |
 | 13 | MCP para diagramación y modelado de datos | Qué es MCP. Arquitectura cliente-servidor. Uso de draw.io MCP, MySQL MCP y combinación con skills. | Diseñar una arquitectura y generar un modelo de datos asistidos por agentes. | 1.5 |
-| 14 | Arquitectura on premise segura para IA | Componentes de infraestructura, segmentación, identidad, secretos, control de acceso a bases, observabilidad, auditoría y prevención de fuga de información. | Diseñar una arquitectura on premise segura para incorporar IA en procesos internos. | 1.5 |
-| 15 | Proyecto final | Construcción de un pipeline completo: acceso a datos, transformación, modelado, visualización y documentación asistida por agentes. | Aplicar todos los conceptos del curso en un proyecto real. | 1.5 |
+| 14 | Orquestación de agentes con Omnigent | Problemas de trabajar con varios agentes. Meta-harnesses. Composición, control y colaboración multiagente. Diferencias frente a plataformas de workflows como n8n. | Entender cómo coordinar múltiples agentes desde una capa superior. | 1.5 |
+| 15 | Arquitectura on premise segura para IA | Componentes de infraestructura, segmentación, identidad, secretos, control de acceso a bases, observabilidad, auditoría y prevención de fuga de información. | Diseñar una arquitectura on premise segura para incorporar IA en procesos internos. | 1.5 |
+| 16 | Proyecto final | Construcción de un pipeline completo: acceso a datos, transformación, modelado, visualización y documentación asistida por agentes. | Aplicar todos los conceptos del curso en un proyecto real. | 1.5 |
 
 ## Duración estimada
 
-El curso está compuesto por **15 sesiones**, cada una con una duración de **1.5 horas**, para una duración total estimada de **22.5 horas**.
+El curso está compuesto por **16 sesiones**, cada una con una duración de **1.5 horas**, para una duración total estimada de **24 horas**.
 
 ## Costo
 
